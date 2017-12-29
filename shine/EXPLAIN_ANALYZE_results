@@ -1,0 +1,31 @@
+Sort  (cost=14111.56..14124.62 rows=5226 width=82) (actual time=1063.176..1064.143 rows=721 loops=1)
+   Sort Key: (((email)::text = 'pat@example.com'::text)) DESC, last_name
+   Sort Method: quicksort  Memory: 126kB
+   ->  Seq Scan on customers  (cost=0.00..13788.82 rows=5226 width=82) (actual time=1.299..1059.583 rows=721 loops=1)
+         Filter: ((lower((first_name)::text) ~~ 'pat%'::text) OR (lower((last_name)::text) ~~ 'pat%'::text) OR (lower((email)::text) = 'pat@example.com'::text))
+         Rows Removed by Filter: 349279
+ Planning time: 0.223 ms
+ Execution time: 1065.307 ms
+(8 rows)
+
+=============================================
+after indexing first_name last_name and email
+=============================================
+
+Sort  (cost=5833.18..5846.24 rows=5224 width=82) (actual time=19.244..20.284 rows=721 loops=1)
+   Sort Key: (((email)::text = 'pat@example.com'::text)) DESC, last_name
+   Sort Method: quicksort  Memory: 126kB
+   ->  Bitmap Heap Scan on customers  (cost=145.31..5510.58 rows=5224 width=82) (actual time=0.703..15.671 rows=721 loops=1)
+         Recheck Cond: ((lower((first_name)::text) ~~ 'pat%'::text) OR (lower((last_name)::text) ~~ 'pat%'::text) OR (lower((email)::text) = 'pat@example.com'::text))
+         Filter: ((lower((first_name)::text) ~~ 'pat%'::text) OR (lower((last_name)::text) ~~ 'pat%'::text) OR (lower((email)::text) = 'pat@example.com'::text))
+         Heap Blocks: exact=672
+         ->  BitmapOr  (cost=145.31..145.31 rows=5250 width=0) (actual time=0.450..0.450 rows=0 loops=1)
+               ->  Bitmap Index Scan on index_customers_on_lower_first_name_varchar_pattern_ops  (cost=0.00..41.92 rows=1750 width=0) (actual time=0.337..0.337 rows=721 loops=1)
+                     Index Cond: ((lower((first_name)::text) ~>=~ 'pat'::text) AND (lower((first_name)::text) ~<~ 'pau'::text))
+               ->  Bitmap Index Scan on index_customers_on_lower_last_name_varchar_pattern_ops  (cost=0.00..41.92 rows=1750 width=0) (actual time=0.050..0.050 rows=0 loops=1)
+                     Index Cond: ((lower((last_name)::text) ~>=~ 'pat'::text) AND (lower((last_name)::text) ~<~ 'pau'::text))
+               ->  Bitmap Index Scan on index_customers_on_lower_email  (cost=0.00..57.55 rows=1750 width=0) (actual time=0.057..0.057 rows=0 loops=1)
+                     Index Cond: (lower((email)::text) = 'pat@example.com'::text)
+ Planning time: 36.910 ms
+ Execution time: 21.578 ms
+(16 rows)

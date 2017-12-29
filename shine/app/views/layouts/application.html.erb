@@ -26,5 +26,6 @@
     <h2>Environment: <b><%= Rails.env %></b></h2>
 
     <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
