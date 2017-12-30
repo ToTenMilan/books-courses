@@ -24,3 +24,4 @@ config/secrets.yml
 /public/packs-test
 /node_modules
 
+view_backups.rb
