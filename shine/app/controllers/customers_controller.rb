@@ -1,8 +1,13 @@
 class CustomersController < ApplicationController
+
   PAGE_SIZE = 10
 
   def index
+
+    # method as it was before
+
     @page = (params[:page] || 0).to_i
+
     if params[:keywords].present?
       @keywords = params[:keywords]
       customer_search_term = CustomerSearchTerm.new(@keywords)
@@ -17,7 +22,7 @@ class CustomersController < ApplicationController
     respond_to do |format|
       format.html {}
       format.json {
-        render(json: { customers: @customers })
+        render json: { customers: @customers }
       }
     end
   end
