@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Http      } from "@angular/http";
+import { Router } from "@angular/router";
 import   template    from "./template.html";
 
 var CustomerSearchComponent = Component({
@@ -9,12 +10,19 @@ var CustomerSearchComponent = Component({
 }).Class({
   constructor: [
     Http,
-    function(http) {
+    Router,
+    function(http, router) {
       this.customers = null;
       this.http      = http;
       this.keywords  = "";
+      this.router = router
     }
   ],
+
+  viewDetails: function(customer) {
+    this.router.navigate(["/", customer.id ])
+  },
+
   search: function($event) {
     var self = this;
     self.keywords = $event;
@@ -32,6 +40,8 @@ var CustomerSearchComponent = Component({
       }
     );
   }
+
 });
 
 export { CustomerSearchComponent };
+
