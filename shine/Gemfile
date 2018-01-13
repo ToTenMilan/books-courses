@@ -10,7 +10,7 @@ end
 gem 'rails', '~> 5.1.4'
 
 # webpacker is equivalent of assets pipeline (thus yarn is eq. of bundle)
-gem 'webpacker'
+gem 'webpacker', "~> 2.0"
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
