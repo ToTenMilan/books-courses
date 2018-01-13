@@ -28,6 +28,8 @@ default: &default
     - .gif
     - .jpeg
     - .jpg
+    - .elm
+    - .html
 
 development:
   <<: *default
