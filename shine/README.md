@@ -1,24 +1,7 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Shine App
+###### made with the book
+#### ["Rails, Angular, Postgres and Bootstrap - second edition"](https://pragprog.com/book/dcbang2/rails-angular-postgres-and-bootstrap-second-edition)
+###### written by
+#### David Bryant Copeland
+###### Published by
+#### The Pragmatic Programmers
