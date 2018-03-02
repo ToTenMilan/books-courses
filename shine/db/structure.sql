@@ -155,7 +155,7 @@ CREATE MATERIALIZED VIEW customer_details AS
     shipping_address.id AS shipping_address_id,
     shipping_address.street AS shipping_street,
     shipping_address.city AS shipping_city,
-    shipping_state.code AS shipping_state_code,
+    shipping_state.code AS shipping_state,
     shipping_address.zipcode AS shipping_zipcode
    FROM ((((((customers
      JOIN customers_billing_addresses ON ((customers.id = customers_billing_addresses.customer_id)))

@@ -17,6 +17,9 @@ import { RouterModule           } from "@angular/router";
 
 import { CustomerSearchComponent } from "CustomerSearchComponent";
 import { CustomerDetailsComponent } from "CustomerDetailsComponent";
+import { CustomerInfoComponent } from "CustomerDetailsComponent/CustomerInfoComponent";
+import { CreditCardComponent } from "CustomerDetailsComponent/CreditCardComponent";
+import { AddressComponent } from "CustomerDetailsComponent/AddressComponent";
 
 var RESULTS = [
   {
@@ -88,6 +91,9 @@ var CustomerAppModule = NgModule({
   declarations: [
     CustomerSearchComponent,
     CustomerDetailsComponent,
+    CustomerInfoComponent,
+    CreditCardComponent,
+    AddressComponent,
     AppComponent
   ],
   bootstrap:    [ AppComponent ]

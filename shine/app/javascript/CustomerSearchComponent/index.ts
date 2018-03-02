@@ -29,7 +29,7 @@ var CustomerSearchComponent = Component({
     if (self.keywords.length < 3) {
       return;
     }
-    self.http.get(
+    self.http.get( // returns RxJS observable, which has 'subscribe' method
       "/customers.json?keywords=" + self.keywords
     ).subscribe(
       function(response) {
