@@ -20,6 +20,7 @@ import { CustomerDetailsComponent } from "CustomerDetailsComponent";
 import { CustomerInfoComponent } from "CustomerDetailsComponent/CustomerInfoComponent";
 import { CreditCardComponent } from "CustomerDetailsComponent/CreditCardComponent";
 import { AddressComponent } from "CustomerDetailsComponent/AddressComponent";
+import { TextFieldComponent } from "TextFieldComponent";
 
 var RESULTS = [
   {
@@ -94,6 +95,7 @@ var CustomerAppModule = NgModule({
     CustomerInfoComponent,
     CreditCardComponent,
     AddressComponent,
+    TextFieldComponent,
     AppComponent
   ],
   bootstrap:    [ AppComponent ]
