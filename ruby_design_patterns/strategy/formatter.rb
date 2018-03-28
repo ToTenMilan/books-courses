@@ -1,11 +1,11 @@
 # simplify the fow of data, but couple strategy and context more than before
-class Formatter
-	def output_report( title, text )
-		raise 'Abstract method called'
-	end
-end
+# class Formatter
+# 	def output_report( title, text )
+# 		raise 'Abstract method called'
+# 	end
+# end
 
-class HTMLFormatter < Formatter
+class HTMLFormatter
 	def output_report( context ) # <-------
 		puts('<html>')
 		puts(' <head>')
@@ -20,10 +20,10 @@ class HTMLFormatter < Formatter
 	end
 end
 
-class PlainTextFormatter < Formatter
-	def output_report(title, text)
-		puts("***** #{title} *****")
-		text.each do |line|
+class PlainTextFormatter
+	def output_report(context)
+		puts("***** #{context.title} *****")
+		context.text.each do |line|
 			puts(line)
 		end
 	end
