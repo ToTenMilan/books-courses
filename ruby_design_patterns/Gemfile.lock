@@ -1,0 +1,179 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    andand (1.3.3)
+    arr-pm (0.0.10)
+      cabin (> 0)
+    backports (3.11.1)
+    bcrypt (3.1.11)
+    bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
+    cabin (0.9.0)
+    childprocess (0.9.0)
+      ffi (~> 1.0, >= 1.0.11)
+    clamp (1.0.1)
+    data_mapper (1.2.0)
+      dm-aggregates (~> 1.2.0)
+      dm-constraints (~> 1.2.0)
+      dm-core (~> 1.2.0)
+      dm-migrations (~> 1.2.0)
+      dm-serializer (~> 1.2.0)
+      dm-timestamps (~> 1.2.0)
+      dm-transactions (~> 1.2.0)
+      dm-types (~> 1.2.0)
+      dm-validations (~> 1.2.0)
+    data_objects (0.10.17)
+      addressable (~> 2.1)
+    datamapper (1.2.0)
+      dm-aggregates (~> 1.2.0)
+      dm-constraints (~> 1.2.0)
+      dm-core (~> 1.2.0)
+      dm-migrations (~> 1.2.0)
+      dm-serializer (~> 1.2.0)
+      dm-timestamps (~> 1.2.0)
+      dm-transactions (~> 1.2.0)
+      dm-types (~> 1.2.0)
+      dm-validations (~> 1.2.0)
+    dm-aggregates (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-constraints (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-core (1.2.1)
+      addressable (~> 2.3)
+    dm-do-adapter (1.2.0)
+      data_objects (~> 0.10.6)
+      dm-core (~> 1.2.0)
+    dm-enum (0.0.3)
+      dm-core
+    dm-migrations (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-serializer (1.2.2)
+      dm-core (~> 1.2.0)
+      fastercsv (~> 1.5)
+      json (~> 1.6)
+      json_pure (~> 1.6)
+      multi_json (~> 1.0)
+    dm-sqlite-adapter (1.2.0)
+      dm-do-adapter (~> 1.2.0)
+      do_sqlite3 (~> 0.10.6)
+    dm-tags (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-timestamps (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-transactions (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-types (1.2.2)
+      bcrypt-ruby (~> 3.0)
+      dm-core (~> 1.2.0)
+      fastercsv (~> 1.5)
+      json (~> 1.6)
+      multi_json (~> 1.0)
+      stringex (~> 1.4)
+      uuidtools (~> 2.1)
+    dm-validations (1.2.0)
+      dm-core (~> 1.2.0)
+    do_sqlite3 (0.10.17)
+      data_objects (= 0.10.17)
+    dotenv (2.2.1)
+    faraday (0.14.0)
+      multipart-post (>= 1.2, < 3)
+    fastercsv (1.5.5)
+    ffi (1.9.23)
+    fox (0.6.3)
+      andand
+      bundler
+      data_mapper
+      datamapper
+      dm-core
+      dm-do-adapter
+      dm-enum
+      dm-migrations
+      dm-sqlite-adapter
+      dm-tags
+      dm-timestamps
+      dm-types
+      dm-validations
+      faraday
+      fpm
+      gettext
+      mime-types
+      moneta
+      msgpack
+      oj
+      os
+      pony
+      progressbar
+      ptools
+      rack
+      taglib-ruby
+      thor
+    fpm (1.9.3)
+      arr-pm (~> 0.0.10)
+      backports (>= 2.6.2)
+      cabin (>= 0.6.0)
+      childprocess
+      clamp (~> 1.0.0)
+      ffi
+      json (>= 1.7.7, < 2.0)
+      pleaserun (~> 0.0.29)
+      ruby-xz
+      stud
+    gettext (3.2.9)
+      locale (>= 2.0.5)
+      text (>= 1.3.0)
+    insist (1.0.0)
+    io-like (0.3.0)
+    json (1.8.6)
+    json_pure (1.8.6)
+    locale (2.1.2)
+    mail (2.7.0)
+      mini_mime (>= 0.1.1)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    mini_mime (1.0.0)
+    moneta (1.0.0)
+    msgpack (1.2.4)
+    multi_json (1.13.1)
+    multipart-post (2.0.0)
+    mustache (0.99.8)
+    oj (3.5.0)
+    os (1.0.0)
+    pleaserun (0.0.30)
+      cabin (> 0)
+      clamp
+      dotenv
+      insist
+      mustache (= 0.99.8)
+      stud
+    pony (1.12)
+      mail (>= 2.0)
+    progressbar (1.9.0)
+    ptools (1.3.5)
+    public_suffix (3.0.2)
+    rack (2.0.4)
+    rake (12.3.1)
+    ruby-try (1.1.1)
+    ruby-xz (0.2.3)
+      ffi (~> 1.9)
+      io-like (~> 0.3)
+    stringex (1.5.1)
+    stud (0.0.23)
+    taglib-ruby (0.7.1)
+    text (1.3.1)
+    thor (0.20.0)
+    uuidtools (2.1.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  fox (~> 0.6.3)
+  rake
+  ruby-try
+  taglib-ruby (~> 0.7.1)
+
+BUNDLED WITH
+   1.16.1

@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+gem 'rake'
+gem 'ruby-try'
+gem 'taglib-ruby', '~> 0.7.1'
+gem 'fox', '~> 0.6.3'
