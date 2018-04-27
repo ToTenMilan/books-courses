@@ -1,0 +1,4 @@
+plain line
+line with checksum
+2018-04-26 21:14:14 +0200: with time stamp
+1: with line number
