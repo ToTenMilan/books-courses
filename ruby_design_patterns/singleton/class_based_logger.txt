@@ -1,0 +1,3 @@
+Computer wins chess game.
+AE-35 hardware failure predicted.
+HAL-9000 malfunction, take emergency action!
