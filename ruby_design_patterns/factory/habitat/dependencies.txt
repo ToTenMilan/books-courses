@@ -1,0 +1,8 @@
+habitat
+  organism_factory
+    tiger
+    tree
+    frog
+    algae
+    duck
+    lily
