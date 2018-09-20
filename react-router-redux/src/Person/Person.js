@@ -1,8 +1,7 @@
-import React from 'react';
+import React from 'react'
 import './Person.css'
 
-const person = ( props ) => {
-
+const person = (props) => {
   return (
     <div className="Person">
       <p onClick={props.click}>yello, {props.name} here. I have {props.age} years old</p>
@@ -12,4 +11,4 @@ const person = ( props ) => {
   )
 }
 
-export default person;
+export default person
