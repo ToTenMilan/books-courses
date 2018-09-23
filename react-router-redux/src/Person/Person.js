@@ -1,13 +1,8 @@
 import React from 'react'
-import Radium from 'radium'
+// import Radium from 'radium'
 import './Person.css'
 
 const person = (props) => {
-	const style = {
-		'@media (min-width: 500px)': {
-			width: '450px'
-		}
-	}
   return (
     <div className="Person" style={style}>
       <p onClick={props.click}>yello, {props.name} here. I have {props.age} years old</p>
@@ -17,4 +12,4 @@ const person = (props) => {
   )
 }
 
-export default Radium(person)
+export default person
