@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+// import Radium, { StyleRoot } from 'radium'
 import Person from './Person/Person';
 
 class App extends Component {
@@ -50,11 +51,12 @@ class App extends Component {
 
   render() {
   	const style = {
-  		backgroundColor: 'light-blue',
+  		backgroundColor: 'green',
+      color: 'white',
   		font: 'inherit',
   		border: '1px solid blue',
   		padding: '8px',
-  		cursor: 'pointer'
+  		cursor: 'pointer',
   	}
 
     let persons = null
@@ -63,7 +65,7 @@ class App extends Component {
       persons = (
         <div>
           {this.state.persons.map((person, index) => {
-            return <Person 
+            return <Person
               click={() => this.deletePersonHandler(index)}
               name={person.name}
               age={person.age}
@@ -72,17 +74,29 @@ class App extends Component {
           })}
         </div>
       )
+
+      style.backgroundColor = 'salmon'
+    }
+
+    const classes = []
+    if (this.state.persons.length <= 2) {
+      classes.push('red')
+    }
+    if (this.state.persons.length <= 1) {
+      classes.push('bold')
     }
 
     return (
+      // <StyleRoot>
       <div className='App'>
         <h1>Hello React</h1>
-        <p>its alive</p>
+        <p className={classes.join(' ')}>its alive</p>
         <button
         	style={style}
         	onClick={this.togglePersonsHandler}>Switch Name</button>
         {persons}
       </div>
+      // </StyleRoot>
     )
   }
 }
