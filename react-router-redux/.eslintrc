@@ -151,7 +151,7 @@
     "no-undef-init": 2, // disallow use of undefined when initializing variables
     "no-undefined": 2, // disallow use of undefined variable (off by default)
     "no-unused-vars": 2, // disallow declaration of variables that are not used in the code
-    "no-use-before-define": 2, // disallow use of variables before they are defined
+    "no-use-before-define": 'off', // disallow use of variables before they are defined
 
     //
     //Stylistic Issues
@@ -216,7 +216,7 @@
     // the functionality is the same.
     //
     "max-depth": [0, 3], // specify the maximum depth that blocks can be nested (off by default)
-    "max-len": [2, 100, 2], // specify the maximum length of a line in your program (off by default)
+    "max-len": 'off', // specify the maximum length of a line in your program (off by default)
     "max-params": [2, 5], // limits the number of parameters that can be used in the function declaration. (off by default)
     "max-statements": 0, // specify the maximum number of statement allowed in a function (off by default)
     "no-bitwise": 0, // disallow use of bitwise operators (off by default)
@@ -239,7 +239,7 @@
     "react/no-unknown-property": 2, // Prevent usage of unknown DOM property    
     "react/react-in-jsx-scope": 2, // Prevent missing React when using JSX
     "react/self-closing-comp": 2, // Prevent extra closing tags for components without children
-    "react/jsx-wrap-multilines": 2, // Prevent missing parentheses around multilines JSX
+    "react/jsx-wrap-multilines": 'off', // Prevent missing parentheses around multilines JSX
     //"react/prop-types": 2, // Prevent missing props validation in a React component definition
   }
 }
