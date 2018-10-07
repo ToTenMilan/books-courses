@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Aux/Aux';
 import Burger from '../../components/Burger/Burger'
 import BuildControls from '../../components/Burger/BuildControls/BuildControls'
 import Modal from '../../components/UI/Modal/Modal'
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary'
 
 const INGREDIENT_PRICES = {
-    salad: 0.5,
-    sheese: 0.6,
-    meat: 0.4,
-    bacon: 0.7
+    salad: 0.2,
+    cheese: 0.4,
+    meat: 0.9,
+    bacon: 0.5
 
 }
 
@@ -73,6 +73,14 @@ class BurgerBuilder extends Component {
         this.setState({purchasing: true})
     }
 
+    purchaseCancelHandler = () => {
+        this.setState({purchasing: false})
+    }
+
+    purchaseContinueHandler = () => {
+        alert('You continued')
+    }
+
     render() {
         const disabledInfo = {
             ...this.state.ingredients
@@ -83,8 +91,16 @@ class BurgerBuilder extends Component {
         // this looks like { salad: false, bacon: true }
         return (
             <Aux>
-                <Modal show={this.state.purchasing}>
-                    <OrderSummary ingredients={this.state.ingredients} />
+                {/* Modal component is hidden and dont need to be rerendered while rendering Burger and BuildControls */}
+                <Modal
+                    show={this.state.purchasing}
+                    modalClosed={this.purchaseCancelHandler}>
+                        <OrderSummary
+                            ingredients={this.state.ingredients}
+                            price={this.state.totalPrice}
+                            purchaseCancelled={this.purchaseCancelHandler}
+                            purchaseContinued={this.purchaseContinueHandler}
+                        />
                 </Modal>  
                 <Burger ingredients={this.state.ingredients} />
                 <BuildControls
