@@ -23,7 +23,7 @@ class Layout extends Component {
 		this.setState((prevState) =>  {
 			return { showSideDrawer: !prevState.showSideDrawer }
 		})
-		this.setState
+		// this.setState
 	}
 	
 	render() {
