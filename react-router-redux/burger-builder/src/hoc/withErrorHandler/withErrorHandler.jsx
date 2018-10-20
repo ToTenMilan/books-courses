@@ -10,14 +10,21 @@ const withErrorHandler = ( WrappedComponent, axios ) => {
         }
 
         componentWillMount () { // willMount used (instead of didMount) to be able to handle errors while getting data
-            axios.interceptors.request.use(req => {
+            this.reqInterceptor = axios.interceptors.request.use(req => {
                 this.setState({ error: null });
                 return req
             })
-            axios.interceptors.response.use(res => res, error => {
+            this.resInterceptor = axios.interceptors.response.use(res => res, error => {
                 this.setState({ error: error });
             })
         }
+
+        // THIS IS VERY IMPORTANT
+        componentWillUnmount () {
+            console.log('Will unmount', this.reqInterceptor, this.resInterceptor)
+            axios.interceptors.request.eject(this.reqInterceptor)
+            axios.interceptors.response.eject(this.resInterceptor)
+        } // Prevent memory leaks by removing interseptors
 
         errorConfirmedHandler = () => {
             this.setState({ error: null });
