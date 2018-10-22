@@ -10,6 +10,9 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.0.13"
   },
+  "devDependencies": {
+    "deep-extend": ">=0.5.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
