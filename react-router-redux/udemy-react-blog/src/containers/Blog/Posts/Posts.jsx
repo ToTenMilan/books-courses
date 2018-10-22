@@ -9,6 +9,8 @@ class Posts extends Component {
     }
 
     componentDidMount() {
+        console.log(this.props);
+        
         axios.get('/posts') // axios.get return s a promise, so .then needs to be chained (can't store this in variable cause its async and JS executes sync)
             .then(response => {
                 const posts = response.data.slice(0, 4)
