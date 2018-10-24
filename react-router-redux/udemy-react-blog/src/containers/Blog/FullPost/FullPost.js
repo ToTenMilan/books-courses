@@ -9,36 +9,45 @@ class FullPost extends Component {
         loadedPost: null
     }
 
+    componentDidMount() {
+        console.log('==== id:' + this.props.match.params.id);
+        this.loadData()     
+    }
+
     componentDidUpdate() {
-        if (this.props.id) {
-            if (!this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost.id !== this.props.id))
-            axios.get('/posts/' + this.props.id)
+        this.loadData()
+    }
+
+    loadData () {
+        if (this.props.match.params.id) {
+            if (!this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost.id != this.props.match.params.id))
+            axios.get('/posts/' + this.props.match.params.id)
                 .then(response => {
                     this.setState({ loadedPost: response.data });
                 })
         }
     }
 
-    // deletePostHandler = () => {
-    //     console.log('in delete')
-    //     // const post = {
-    //     //     title: this.state.title,
-    //     //     body: this.state.content,
-    //     //     author: this.state.author
-    //     // }
-    //     axios.delete('/posts' + this.props.id, this.props.data)
-    //         .then(response => {
-    //             console.log(response)
-    //         })
-    //         .catch(error => {
-    //             console.log(error);
+    deletePostHandler = () => {
+        console.log('in delete')
+        // const post = {
+        //     title: this.state.title,
+        //     body: this.state.content,
+        //     author: this.state.author
+        // }
+        axios.delete('/posts' + this.props.match.params.id)
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => {
+                console.log(error);
                 
-    //         })
-    // }
+            })
+    }
 
     render () {
         let post = <p style={{textAlign: 'center'}}>Please select a Post!</p>;
-        if (this.props.id) {
+        if (this.props.match.params.id) {
             post = <p style={{textAlign: 'center'}}>Loading...</p>
         }
         if (this.state.loadedPost) {
