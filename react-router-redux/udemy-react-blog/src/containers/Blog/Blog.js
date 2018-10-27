@@ -3,15 +3,20 @@ import React, { Component } from 'react';
 
 // import Post from '../../components/Post/Post';
 import { Route, NavLink, Switch, Redirect } from 'react-router-dom'
-import Posts from '../Blog/Posts/Posts'
-import NewPost from '../Blog/NewPost/NewPost'
-// import FullPost from '../Blog/FullPost/FullPost'
+import Posts from './Posts/Posts'
+// import NewPost from './NewPost/NewPost'
+import asyncComponent from '../../hoc/asyncComponent'
+// import FullPost from '../FullPost/FullPost'
 import './Blog.css';
 // import axios from 'axios'
 
+const AsyncNewPost = asyncComponent(() => {
+    return import('./NewPost/NewPost')
+})
+
 class Blog extends Component {
     state = {
-        auth: false
+        auth: true
     }
 
     render () {
@@ -42,10 +47,10 @@ class Blog extends Component {
                 {/* <Route path="/" exact render={() => <h1>Home</h1>} /> */}
                 {/* Switch lets match routes one at a time */}
                 <Switch>
-                    {this.state.auth ? <Route path="/new-post" component={NewPost} /> : null }
+                    {this.state.auth ? <Route path="/new-post" component={AsyncNewPost} /> : null }
                     <Route path="/posts" component={Posts} />
-                    <Route render={() => <h1>404 Not Found</h1> } />
-                    {/* <Redirect from="/" to="/posts" /> */}
+                    {/* <Route render={() => <h1>404 Not Found</h1> } /> */}
+                    <Redirect from="/" to="/posts" />
                 </Switch>
                 
             </div>
