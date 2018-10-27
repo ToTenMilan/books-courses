@@ -1,9 +1,22 @@
 ---
-title: "Pandas and Bananas"
+title: "Go Skateboarding Day Wrocław 2018 - Relacja"
 date: "2017-08-21"
 ---
+<!-- YO! Na koniec lata sprawdzajcie relację z tegorocznego Go Skateboarding Day, prosto ze stolicy regionu 😀
 
-Do Pandas eat bananas? Check out this short video that shows that yes! pandas do
-seem to really enjoy bananas!
+Pozdro dla wszystkich którzy tworzyli klimat, dziękówka dla sponsorów i harpaganów którzy wyjaśnili wszystkie pokręcone spoty na trasie!
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?=4SZl1r2O_bY" frameborder="0" allowfullscreen></iframe>
+Miłego!!🍸🍸
+
+Wielka Piona dla Bartek Hysyk za poprowadzenie akcji.
+
+Kamera i montaż:
+Damian Domasz, Jarek Marek
+
+Muza:
+Jimmy Kiss/ Bez Przyczyny "Nowe Spojrzenie" instrumental
+Wu Tang "Diesel Fluid"
+
+Pełna Moc! -->
+
+<!-- <iframe src="https://player.vimeo.com/video/180295016" width="640" height="468" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->

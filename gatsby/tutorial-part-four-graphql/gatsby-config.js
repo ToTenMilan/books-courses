@@ -1,7 +1,6 @@
 module.exports = {
 	siteMetadata: {
-		title: ` I am site Data, change me in gatsby-config.js file.`,
-		yolo: `wassup`,
+    title: `Harpagan- "osoba gwałtowna, impulsywna, (...) niezwykle wytrzymała, silna, wytrwała" -Słownik Języka Polskiego.`,
 	},
   plugins: [
     {

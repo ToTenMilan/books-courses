@@ -33,7 +33,8 @@ export default ({ children }) => (
               font-style: normal;
             `}
           >
-            {data.site.siteMetadata.title}
+          <img src="https://scontent-sea1-1.cdninstagram.com/vp/c5a40e422a0a15a4b11930c96fa86332/5C2AF8CF/t51.2885-19/21911500_128420494549637_8885057948280160256_n.jpg" alt="harrpagan"/>
+            HaRRpagan's Home
           </h3>
         </Link>
         <Link
