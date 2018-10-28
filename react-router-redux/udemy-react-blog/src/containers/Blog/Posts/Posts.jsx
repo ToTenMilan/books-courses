@@ -28,7 +28,6 @@ class Posts extends Component {
             })
             .catch(error => {
                 console.log(error);
-                
                 // this.setState({ error: true });
             })
     }
@@ -46,14 +45,13 @@ class Posts extends Component {
         if (!this.state.error) {
             posts = this.state.posts.map(post => {
                 return (
-                    // <Link to={'/' + post.id} key={post.id}>
+                    <Link to={'/' + post.id} key={post.id}>
                         <Post
-                            key={post.id}    
+                            key={post.id}
                             title={post.title}
                             author={post.author}
-                            
                             clicked={() => this.postSelectedHandler(post.id) } />
-                    // </Link>
+                    </Link>
                 )
             })
         }
@@ -64,6 +62,7 @@ class Posts extends Component {
                     {posts}
                 </section>
                 {/* When route is nested like here, component is not rerendering, its updating so compDidUpdate needs to change its contents */}
+                
                 <Route path={this.props.match.url + '/:id'} exact component={FullPost} /> 
             </div>
         );
