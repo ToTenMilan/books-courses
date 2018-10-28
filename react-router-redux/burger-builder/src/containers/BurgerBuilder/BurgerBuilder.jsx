@@ -27,7 +27,8 @@ class BurgerBuilder extends Component {
         error: false
     }
 
-    componentDidMount () { 
+    componentDidMount () {
+        console.log(this.props)
         axios.get('https://react-burger-3.firebaseio.com/ingredients.json')
             .then(response => {
                 this.setState({ ingredients: response.data });
@@ -88,32 +89,34 @@ class BurgerBuilder extends Component {
     }
 
     purchaseContinueHandler = () => {
-        // alert('You continued')
-        this.setState({ loading: true });
-        const order = {
-            ingredients: this.state.ingredients,
-            price: this.state.totalPrice, // in real world, calculate such fields (total price) on the backend, because users may manipulate them on frontend
-            customer: {
-                name: 'gregson peks',
-                address: {
-                    street: 'yolo streeet',
-                    zipcode: '23423',
-                    country: 'Neverland'
-                },
-                email: 'test@test.com'
-            },
-            deliveryMethod: 'fastest'
-        }
-        // axios.post('/orders.json', order)
-        //     .then(response => console.log(response))
-        //     .catch(error => console.log(error))
-        axios.post( '/orders.json', order )
-            .then(response => {
-                this.setState({ loading: false, purchasing: false });
-            })
-            .catch(error => {
-                this.setState({ loading: false, purchasing: false });
-            })
+        // // alert('You continued')
+        // this.setState({ loading: true });
+        // const order = {
+        //     ingredients: this.state.ingredients,
+        //     price: this.state.totalPrice, // in real world, calculate such fields (total price) on the backend, because users may manipulate them on frontend
+        //     customer: {
+        //         name: 'gregson peks',
+        //         address: {
+        //             street: 'yolo streeet',
+        //             zipcode: '23423',
+        //             country: 'Neverland'
+        //         },
+        //         email: 'test@test.com'
+        //     },
+        //     deliveryMethod: 'fastest'
+        // }
+        // // axios.post('/orders.json', order)
+        // //     .then(response => console.log(response))
+        // //     .catch(error => console.log(error))
+        // axios.post( '/orders.json', order )
+        //     .then(response => {
+        //         this.setState({ loading: false, purchasing: false });
+        //     })
+        //     .catch(error => {
+        //         this.setState({ loading: false, purchasing: false });
+        //     })
+
+        this.props.history.push('/checkout')
     }
 
     render() {
