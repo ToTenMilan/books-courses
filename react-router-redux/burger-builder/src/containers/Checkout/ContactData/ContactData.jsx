@@ -47,7 +47,8 @@ class ContactData extends Component {
                     maxLength: 5
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                errorMessage: 'ZIP code must have 5 digits'
             },
             country: {
                 elementType: 'input',
@@ -83,7 +84,10 @@ class ContactData extends Component {
                         {value: 'cheapest', displayValue: 'Cheapest'}
                     ]
                 },
-                value: ''
+                value: '',
+                validation: {
+                    required: true
+                }
             }
         },
         loading: false
@@ -171,6 +175,7 @@ class ContactData extends Component {
                         invalid={!formElement.config.valid}
                         shouldValidate={formElement.config.validation}
                         touched={formElement.config.touched}
+                        errorMessage={formElement.config.errorMessage}
                         changed={(event) => this.inputChangedHandler(event, formElement.id)} /> // () => this.inChHa() to evaluate this method only for specific input instead globally
                 ))}
                 <Button btnType="Success">Order now</Button>
