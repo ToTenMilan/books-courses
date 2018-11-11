@@ -10,6 +10,7 @@ const button = (props) => (
         // so when using it we can do it like so:
         // <Button btnType="Danger" clicked={}
 
+        disabled={props.disabled}
         className={[classes.Button, classes[props.btnType]].join(' ')}
         onClick={props.clicked}>
 
