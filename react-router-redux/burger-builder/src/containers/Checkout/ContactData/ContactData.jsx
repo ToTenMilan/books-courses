@@ -64,16 +64,27 @@ class ContactData extends Component {
 
     orderHandler = (event) => {
         event.preventDefault() // submit form will reload the page, which is by default. We prevent this default here
-        console.log(this.props.ingredients);
+        // console.log(this.props.ingredients);
         // alert('You continued')
         this.setState({ loading: true });
+        const formData = {}
+        for (let formElementIdentifier in this.state.orderForm) {
+            formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value
+            // this will create
+            // {
+            //     name: 'name laksjd'
+            //     street: 'sldkfj'
+            //     zipcode: 's.dfjlk'
+            //     country: 'lsdkjfsdkf'
+            //     email: 'jlsdf@sdkjf.slk'
+            //     deliveryMethod: 'fastest'
+            // }
+        }
         const order = {
             ingredients: this.props.ingredients,
             price: this.props.price, // in real world, calculate such fields (total price) on the backend, because users may manipulate them on frontend
+            orderData: formData // add customer data to order
         }
-        // axios.post('/orders.json', order)
-        //     .then(response => console.log(response))
-        //     .catch(error => console.log(error))
         axios.post( '/orders.json', order )
             .then(response => {
                 this.setState({ loading: false });
@@ -105,7 +116,7 @@ class ContactData extends Component {
             })
         }
         let form = (
-            <form>
+            <form onSubmit={this.orderHandler}>
                 {formElementsArray.map(formElement => (
                     <Input
                         key={formElement.id}
@@ -114,7 +125,7 @@ class ContactData extends Component {
                         value={formElement.config.value}
                         changed={(event) => this.inputChangedHandler(event, formElement.id)} /> // () => this.inChHa() to evaluate this method only for specific input instead globally
                 ))}
-                <Button btnType="Success" clicked={this.orderHandler}>Order now</Button>
+                <Button btnType="Success">Order now</Button>
             </form>
         )
         if (this.state.loading) {
