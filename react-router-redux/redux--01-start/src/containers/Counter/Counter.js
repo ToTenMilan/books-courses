@@ -6,7 +6,8 @@ import CounterOutput from '../../components/CounterOutput/CounterOutput';
 
 class Counter extends Component {
     state = {
-        counter: 0
+        counter: 0,
+        results: []
     }
 
     counterChangedHandler = ( action, value ) => {
@@ -33,7 +34,14 @@ class Counter extends Component {
                 <CounterControl label="Increment" clicked={this.props.onIncrementCounter} />
                 <CounterControl label="Decrement" clicked={this.props.onDecrementCounter}  />
                 <CounterControl label="Add 10" clicked={this.props.onAddCounter}  />
-                <CounterControl label="Subtract 15" clicked={this.props.onSubtractCounter}  />
+                <CounterControl label="Subtract 15" clicked={this.props.onSubtractCounter} />
+                <hr/>
+                <button onClick={this.props.onStoreResult}>Store result</button>
+                <ul>
+                    {this.props.storedResults.map(storedResult => (
+                        <li key={storedResult.id} onClick={this.props.onDeleteResult}>{storedResult.value}</li>
+                    ))}
+                </ul>
             </div>
         );
     }
@@ -41,7 +49,8 @@ class Counter extends Component {
 
 const mapStateToProps = state => {
     return {
-        ctr: state.counter // available in props
+        ctr: state.counter, // available in props
+        storedResults: state.results
     }
 }
 
@@ -50,7 +59,9 @@ const mapDispatchToProps = dispatch => {
         onIncrementCounter: () => dispatch({type: 'INCREMENT'}), // available in props, definition of sending action to reducer to update the store
         onDecrementCounter: () => dispatch({type: 'DECREMENT'}),
         onAddCounter: () => dispatch({type: 'ADD', val: 10}),
-        onSubtractCounter: () => dispatch({type: 'SUBTRACT', val: 15})
+        onSubtractCounter: () => dispatch({type: 'SUBTRACT', val: 15}),
+        onStoreResult: () => dispatch({type: 'STORE_RESULT'}),
+        onDeleteResult: () => dispatch({type: 'DELETE_RESULT'})
     }
 }
 
