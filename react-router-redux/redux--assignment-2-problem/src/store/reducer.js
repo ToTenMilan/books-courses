@@ -4,13 +4,13 @@ const initialState = {
     persons: []
 }
 
-const personAddedHandler = () => {
+const personAddedHandler = (action => {
     return {
         id: Math.random(), // not really unique but good enough here!
-        name: 'Max',
-        age: Math.floor( Math.random() * 40 )
+        name: action.personData.name,
+        age: action.personData.age
     }
-}
+})
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -18,7 +18,7 @@ const reducer = (state = initialState, action) => {
             console.log('ADDING PERSON');
             return {
                 ...state,
-                persons: state.persons.concat(personAddedHandler())
+                persons: state.persons.concat(personAddedHandler(action))
             }
         case actionTypes.DELETE_PERSON:
             console.log('DELETING PEROSN');
