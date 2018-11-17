@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import Button from '../../../components/UI/Button/Button'
 import Spinner from '../../../components/UI/Spinner/Spinner'
 import classes from './ContactData.css'
@@ -84,7 +86,7 @@ class ContactData extends Component {
                         {value: 'cheapest', displayValue: 'Cheapest'}
                     ]
                 },
-                value: '',
+                value: 'fastest',
                 validation: {},
                 valid: true
             }
@@ -112,7 +114,7 @@ class ContactData extends Component {
             // }
         }
         const order = {
-            ingredients: this.props.ingredients,
+            ingredients: this.props.ings,
             price: this.props.price, // in real world, calculate such fields (total price) on the backend, because users may manipulate them on frontend
             orderData: formData // add customer data to order
         }
@@ -199,5 +201,12 @@ class ContactData extends Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        ings: state.ingrediens,
+        price: state.totalPrice
+    }
+}
  
-export default ContactData;
+export default connect(mapStateToProps)(ContactData);
