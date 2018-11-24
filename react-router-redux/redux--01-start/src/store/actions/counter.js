@@ -1,4 +1,5 @@
 import * as actionTypes from './actionTypes'
+// ACTION counter
 
 export const increment = () => {
     return {

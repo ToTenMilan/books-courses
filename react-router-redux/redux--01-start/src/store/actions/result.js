@@ -1,4 +1,5 @@
 import * as actionTypes from './actionTypes'
+// ACTION result
 
 export const saveResult = ( res ) => {
     return {
@@ -8,8 +9,10 @@ export const saveResult = ( res ) => {
 }
 
 export const storeResult = (res) => {
-    return (dispatch) => {
+    return (dispatch, getState) => {
         setTimeout(() => {
+            const oldCounter = getState().ctr.counter
+            console.log('oldCounter: ', oldCounter)
             dispatch(saveResult(res))
         }, 2000)
     }

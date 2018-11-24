@@ -1,4 +1,5 @@
 import * as actionTypes from '../actions/actionTypes'
+// REDUCER result
 
 const initialState = {
     results: []

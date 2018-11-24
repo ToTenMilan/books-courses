@@ -1,4 +1,5 @@
-import * as actionTypes from '../actions/actionTypes'
+import * as actionTypes from '../actions/actionTypes';
+// REDUCER counter
 
 const initialState = {
     counter: 0
