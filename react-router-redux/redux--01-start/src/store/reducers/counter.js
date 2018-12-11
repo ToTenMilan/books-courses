@@ -1,5 +1,6 @@
 import * as actionTypes from '../actions/actionTypes';
 // REDUCER counter
+import { updateObject } from '../utility';
 
 const initialState = {
     counter: 0
@@ -8,25 +9,13 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.INCREMENT:
-            return {
-                ...state, // create a copy of old state
-                counter: state.counter + 1 // overwrite 'counter' key if it exists, add it if not exist
-            }
+            return updateObject(state, { counter: state.counter + 1})
         case actionTypes.DECREMENT:
-            return {
-                ...state,
-                counter: state.counter - 1
-            }
+            return updateObject(state, { counter: state.counter - 1})
         case actionTypes.ADD:
-            return {
-                ...state,
-                counter: state.counter + action.val
-            }
+            return updateObject(state, { counter: state.counter + action.val})
         case actionTypes.SUBTRACT:
-            return {
-                ...state,
-                counter: state.counter - action.val
-            }
+            return updateObject(state, { counter: state.counter - action.val})
     }
     return state
 }
