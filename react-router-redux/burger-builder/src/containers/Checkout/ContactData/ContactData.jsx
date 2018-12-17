@@ -118,14 +118,14 @@ class ContactData extends Component {
             price: this.props.price, // in real world, calculate such fields (total price) on the backend, because users may manipulate them on frontend
             orderData: formData // add customer data to order
         }
-        axios.post( '/orders.json', order )
-            .then(response => {
-                this.setState({ loading: false });
-                this.props.history.push('/') // redirect to root
-            })
-            .catch(error => {
-                this.setState({ loading: false });
-            })
+        // axios.post( '/orders.json', order )
+        //     .then(response => {
+        //         this.setState({ loading: false });
+        //         this.props.history.push('/') // redirect to root
+        //     })
+        //     .catch(error => {
+        //         this.setState({ loading: false });
+        //     })
     }
 
     checkValidity(value, rules) {
