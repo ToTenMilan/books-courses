@@ -117,7 +117,8 @@ class ContactData extends Component {
         const order = {
             ingredients: this.props.ings,
             price: this.props.price, // in real world, calculate such fields (total price) on the backend, because users may manipulate them on frontend
-            orderData: formData // add customer data to order
+            orderData: formData, // add customer data to order
+            userId: this.props.userId
         }
 
         this.props.onOrderBurger(order, this.props.token)
@@ -202,7 +203,8 @@ const mapStateToProps = state => {
         ings: state.burgerBuilder.ingredients,
         price: state.burgerBuilder.totalPrice,
         loading: state.order.loading,
-        token: state.auth.token
+        token: state.auth.token,
+        userId: state.auth.userId
     }
 }
 
