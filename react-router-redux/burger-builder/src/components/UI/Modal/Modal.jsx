@@ -4,10 +4,6 @@ import Aux from '../../../hoc/Aux/Aux'
 import Backdrop from '../Backdrop/Backdrop'
 
 class Modal extends Component {
-    componentWillUpdate() {
-        console.log('Modal upadted');
-    }
-
     shouldComponentUpdate(nextProps, nextState) {
         return nextProps.show !== this.props.show || nextProps.children !== this.props.children
     }
