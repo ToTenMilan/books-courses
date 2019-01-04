@@ -1010,7 +1010,7 @@ var _jsxFileName = "/home/milan/workspace/books-courses/react-router-redux/nextj
 
 
 
-var authIndexPage = function authIndexPage() {
+var authIndexPage = function authIndexPage(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
@@ -1023,7 +1023,7 @@ var authIndexPage = function authIndexPage() {
       lineNumber: 6
     },
     __self: this
-  }, "The Auth Page"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_user__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, "The Auth Page - ", props.appName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_user__WEBPACK_IMPORTED_MODULE_1__["default"], {
     name: "Dzambalaja",
     age: 23,
     __source: {
@@ -1032,6 +1032,17 @@ var authIndexPage = function authIndexPage() {
     },
     __self: this
   }));
+};
+
+authIndexPage.getInitialProps = function (context) {
+  var promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve({
+        appName: 'supa app auth page'
+      });
+    }, 5000);
+  });
+  return promise;
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (authIndexPage);
