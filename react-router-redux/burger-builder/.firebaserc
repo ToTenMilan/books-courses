@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "react-burger",
+    "staging": "react-burger-3"
+  }
+}
