@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :find_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @items = Item.all
+    @items = Item.all.order(created_at: 'DESC')
   end
   
   def new
@@ -20,6 +20,29 @@ class ItemsController < ApplicationController
     else
       flash[:error] = "Something went wrong"
       render 'new'
+    end
+  end
+
+  def edit
+  end
+  
+  def update
+    if @item.update(item_params)
+      flash[:success] = "Item was successfully updated"
+      redirect_to @item
+    else
+      flash[:error] = "Something went wrong"
+      render 'edit'
+    end
+  end
+
+  def destroy
+    if @item.destroy
+      flash[:success] = 'Item was successfully deleted.'
+      redirect_to root_path
+    else
+      flash[:error] = 'Something went wrong'
+      redirect_to root_path
     end
   end
   
