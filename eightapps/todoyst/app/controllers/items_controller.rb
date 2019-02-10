@@ -1,19 +1,22 @@
 class ItemsController < ApplicationController
+  # before_action :authenticate_user!
   before_action :find_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @items = Item.all.order(created_at: 'DESC')
+    if user_signed_in?
+      @items = Item.where(user_id: current_user.id).order(created_at: 'DESC')
+    end
   end
   
   def new
-    @item = Item.new
+    @item = current_user.items.build
   end
 
   def show
   end
   
   def create
-    @item = Item.new(item_params)
+    @item = current_user.items.build(item_params)
     if @item.save
       flash[:success] = "Item successfully created"
       redirect_to root_path
