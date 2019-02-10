@@ -1,0 +1,8 @@
+- @messages.each do |msg|
+  .col-md-10.col-md-offset-1
+    .message
+      %h2.message-title
+        = msg.title
+      = link_to 'Join Convo', message_path(msg), class: 'btn-custom'
+
+= link_to 'Post Message', new_message_path
