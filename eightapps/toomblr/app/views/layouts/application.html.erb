@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toomblr</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Raleway' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="sidebar">
+      <ul>
+        <li class='category'><%= link_to 'Toomblr', root_path %></li>
+        <li><%= link_to 'Posts', root_path %></li>
+        <li><%= link_to 'About', about_path %></li>
+        <br>
+        <% unless user_signed_in? %>
+          <li class="sign_in"><%= link_to 'User Login', new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div id="main_content">
+      <div id='header'>
+        <% if current_page?(root_path) %>
+          <p>Post Feed</p>
+        <% elsif current_page?(about_path) %>
+          <p>My Site</p>
+        <% else %>
+          <%= link_to 'Back to Post Feed', root_path %>
+        <% end %>
+
+        <% if user_signed_in? %>
+          <div class='buttons'>
+            <button class='button'><%= link_to 'Make Post', new_post_path %></button>
+            <button class='button'><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></button>
+          </div>
+        <% end %>
+      </div>
+
+      <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: 'alert') %>
+      <% end %>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>
