@@ -1,0 +1,3 @@
+= simple_form_for ([@message, @message.comments.build]) do |m|
+  = m.input :content, label: 'Comments'
+  = m.button :submit, class: 'btn btn-custom'

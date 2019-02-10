@@ -4,6 +4,12 @@
     %p.message-posted-by= time_ago_in_words(@message.created_at)
     %p.message-desc= @message.description
 
+    %h3.comments-section-header Comments:
+    %p= render @message.comments
+
+    %h3.reply-to-msg Join Discussion:
+    = render 'comments/form'
+
     .links.btn_group
       = link_to 'Back', root_path, class: 'btn btn-default'
       = link_to 'Fix', edit_message_path(@message), class: 'btn btn-primary'
