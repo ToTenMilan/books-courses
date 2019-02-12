@@ -3,6 +3,7 @@
   %p.comment-posted-by= posted_by(comment)
 
   .links
-    - if comment.user_id == current_user.id
-      = link_to 'Edit', edit_message_comment_path(comment.message, comment)
-      = link_to 'Delete', message_comment_path(comment.message, comment), method: :delete, data: { confitm: 'Are you sure?' }
+    - if user_signed_in?
+      - if comment.user_id == current_user.id
+        = link_to 'Edit', edit_message_comment_path(comment.message, comment)
+        = link_to 'Delete', message_comment_path(comment.message, comment), method: :delete, data: { confitm: 'Are you sure?' }

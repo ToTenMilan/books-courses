@@ -12,5 +12,7 @@
 
     .links.btn_group
       = link_to 'Back', root_path, class: 'btn btn-default'
-      = link_to 'Fix', edit_message_path(@message), class: 'btn btn-primary'
-      = link_to 'Delete', message_path(@message), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure' }
+      - if user_signed_in?
+        - if @message.user_id == current_user.id
+          = link_to 'Fix', edit_message_path(@message), class: 'btn btn-primary'
+          = link_to 'Delete', message_path(@message), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure' }
