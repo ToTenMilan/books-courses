@@ -1,8 +1,8 @@
 = simple_form_for(@task, html: { class: 'form-horizontal' }) do |f| # too much on the left
-  = f.collection_select :category_id, Category.all, :id, :name, { propmt: 'Choose Category' }
-  = f.input :title, label: 'Task Title'
-  = f.input :description, label: 'Task description'
-  = f.input :company, label: 'Your Company'
-  = f.input :url, label: 'Link to task'
+  = f.collection_select :category_id, Category.all, :id, :name, { propmt: 'Choose Category' }, input_html: { class: 'dropdown-toggle' }
+  = f.input :title, label: 'Task Title', input_html: { class: 'form-control' }
+  = f.input :description, label: 'Task description', input_html: { class: 'form-control' }
+  = f.input :company, label: 'Your Company', input_html: { class: 'form-control' }
+  = f.input :url, label: 'Link to task', input_html: { class: 'form-control' }
   %br
   = f.button :submit

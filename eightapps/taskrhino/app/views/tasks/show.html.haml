@@ -1,7 +1,12 @@
-%h1= @task.title
-%p= @task.description
-%p= @task.company
+#jobs
+  .job
 
-= link_to 'Home', root_path
-= link_to 'Edit', edit_task_path(@task)
-= link_to 'Delete', task_path(@task), method: :delete, data: { confirm: 'Are You Sure?' }
+    %h1= @task.title
+    %p= @task.description
+    %p= @task.company
+    %button.btn.btn-default= link_to "Complete Task", @task.url
+
+#links
+  = link_to 'Home', root_path, class: 'btn btn-sm btn-default'
+  = link_to 'Edit', edit_task_path(@task), class: 'btn btn-sm btn-default'
+  = link_to 'Delete', task_path(@task), method: :delete, data: { confirm: 'Are You Sure?' }, class: 'btn btn-sm btn-default'
