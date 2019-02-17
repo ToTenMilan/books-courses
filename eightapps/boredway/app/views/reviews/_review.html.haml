@@ -1,3 +1,9 @@
 .review
   %p= review.rating
   %p.review-comment= review.comment
+
+  - if user_signed_in?
+    - if review.user_id == current_user.id
+      .links.btn-group
+        = link_to "Edit", edit_play_review_path(review.play, review), class: 'btn btn-custom'
+        = link_to "Delete", play_review_path(review.play, review), method: :delete,  data: { confirm: 'Are You Sure' }, class: 'btn btn-custom'
