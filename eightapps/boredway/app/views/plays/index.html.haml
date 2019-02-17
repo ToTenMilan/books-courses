@@ -4,5 +4,14 @@
 - if @plays.count == 0
   %h3 There are no plays in this category
 - else
-  - @plays.each do |play|
-    %h2= link_to play.title, play_path(play)
+  .row
+    -# - @plays.each do |play|
+    -#   .com-md-3
+    -#     %h2= link_to play.title, play_path(play)
+    
+    - @plays.each do |play|
+      .col-md-3
+        -# %h2= link_to play.image, play_path(play)
+        -# %a(href="/plays/#{play.id}")
+        = link_to (image_tag play.image.variant(resize: '350x350>')), play, class: "play"
+        -# = link_to (image_tag play.image.variant(combine_options: { gravity: 'Center', crop: '350x350+0+0' })), play, class: "play"
