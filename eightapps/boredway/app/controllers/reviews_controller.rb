@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  def def new
+  def new
     find_play
     @review = Review.new
   end
