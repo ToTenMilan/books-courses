@@ -1,7 +1,15 @@
-%h2= @play.title
-%h3= @play.director
-%h4= @play.category.name
-%p= @play.description
+.row
+  .col-md-4
+    -# = image_tag @play.image.variant(combine_options: { gravity: 'Center', crop: '475x325+0+0' }), class: "play-show"
+    = image_tag @play.image.variant(resize: '475x325+0+0' ), class: "play-show"
+  .col-md-8
+    .play-info
+      %h2.play-title= @play.title
+      %h3.play-director
+        %span From
+        = @play.director
+      %h4.play-director= @play.category.name
+      %p.play-desc= @play.description
 
 .links.btn-group
   - if user_signed_in?
