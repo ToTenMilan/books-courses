@@ -25,3 +25,12 @@
       = link_to 'Back', root_path, class: 'btn btn-default'
       = link_to 'Edit', edit_play_path(@play), class: 'btn btn-info'
       = link_to 'Delete', play_path(@play), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure' }
+
+:javascript
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
