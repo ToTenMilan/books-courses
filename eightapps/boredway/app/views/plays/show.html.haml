@@ -10,6 +10,11 @@
         %em From
         = @play.director
       %h4.play-director= @play.category.name
+      %h4.avg-rating Average Rating
+      .average-review-rating{ 'data-score': @average_review }
+      %span.number-of-reviews
+      %em From #{pluralize(@play.reviews.count, 'review')}
+      -# = pluralize(@play.reviews.count, 'review')
       %p.play-desc= @play.description
 
 .row
@@ -28,6 +33,14 @@
 
 :javascript
   $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+
+  $('.average-review-rating').raty({
     readOnly: true,
     score: function() {
       return $(this).attr('data-score');

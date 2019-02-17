@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     find_play
     @review = Review.new
