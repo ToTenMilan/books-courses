@@ -1,0 +1,9 @@
+<h1>New Posts</h1>
+
+<%= form_for @post do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :caption %>
+  <%= f.text_area :caption %>
+  <%= f.submit %>
+<% end %>
