@@ -1,4 +1,5 @@
 = simple_form_for(@task, html: { class: 'form-horizontal' }) do |f| # too much on the left
+  = f.collection_select :category_id, Category.all, :id, :name, { propmt: 'Choose Category' }
   = f.input :title, label: 'Task Title'
   = f.input :description, label: 'Task description'
   = f.input :company, label: 'Your Company'
