@@ -13,5 +13,5 @@
       .col-md-3
         -# %h2= link_to play.image, play_path(play)
         -# %a(href="/plays/#{play.id}")
-        = link_to (image_tag play.image.variant(resize: '350x250')), play, class: "play"
+        = link_to (image_tag play.image.variant(resize: '350x250'), class: "play"), play
         -# = link_to (image_tag play.image.variant(combine_options: { gravity: 'Center', crop: '350x350+0+0' })), play, class: "play"
