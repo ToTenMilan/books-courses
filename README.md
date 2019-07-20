@@ -14,7 +14,7 @@
 
 ###### Railstutorial 4ed. | [GitHub repo](https://github.com/ToTenMilan/the_odin_project/tree/master/rails/sample_app) | [source](https://www.railstutorial.org/)
 
-###### Railstutorial 3ed. [source](https://3rd-edition.railstutorial.org/)
+###### Railstutorial 3ed. | [source](https://3rd-edition.railstutorial.org/)
 
 ###### Agile Web Development with Rails 5 | [GitHub repo](https://github.com/ToTenMilan/Agile-WebDev-with-Rails-5) | [source](https://www.amazon.com/Agile-Web-Development-Rails-5/dp/1680501712)
 
@@ -25,6 +25,8 @@
 #### Courses
 
 ###### edX, Berkeley California - Agile Development Using Ruby on Rails | [source](https://www.edx.org/professional-certificate/agile-development-using-ruby-rails)
+
+###### The Odin Project | [GitHub repo](https://github.com/ToTenMilan/the_odin_project) | [source](https://www.theodinproject.com/courses)
 
 ###### Udemy - Build eight Rails apps fast | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/eightapps) | course removed from Udemy
 
@@ -44,7 +46,7 @@
 
 #### Courses
 
-###### Udemy - React - The Complete Guide (incl Hooks, React Router, Redux) | [source](https://www.udemy.com/react-the-complete-guide-incl-redux/) | [My repo](https://github.com/ToTenMilan/books-courses/tree/master/react-router-redux)
+###### Udemy - React - The Complete Guide (incl Hooks, React Router, Redux) | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/react-router-redux) | [source](https://www.udemy.com/react-the-complete-guide-incl-redux/)
 
 ###### Udemy - React Testing with Jest and Enzyme | [source](https://www.udemy.com/react-testing-with-jest-and-enzyme/)
 
@@ -72,7 +74,7 @@
 
 ###### O'Reilly Safari - Docker Essentials: The Definitive Guide to Docker Containerization | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Docker-essentials-the-definitive-guide-to-docker-containerization) | [source](https://learning.oreilly.com/videos/docker-essentials-the/9781634625814)
 
-###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) O'Reilly Safari - Docker Orchestration and Microservices, Second Edition [source](https://learning.oreilly.com/videos/docker-orchestration-and/9780134670805)
+###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) O'Reilly Safari - Docker Orchestration and Microservices, Second Edition | [source](https://learning.oreilly.com/videos/docker-orchestration-and/9780134670805)
 
 ###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) O'Reilly Safari - Develop and Operate Microservices on Kubernetes | [source](https://learning.oreilly.com/videos/develop-and-operate/9781789135206)
 
