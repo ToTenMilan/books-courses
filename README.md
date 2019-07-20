@@ -2,7 +2,7 @@
 
 #### Books
 
-###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Metaprogramming Ruby 2 [source](https://learning.oreilly.com/library/view/metaprogramming-ruby-2/9781941222751/f_0009.html)
+###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Metaprogramming Ruby 2 | [source](https://learning.oreilly.com/library/view/metaprogramming-ruby-2/9781941222751/f_0009.html)
 
 ###### Design Patterns in Ruby | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/ruby_design_patterns) | [source](https://www.amazon.com/Design-Patterns-Ruby-Russ-Olsen/dp/0321490452)
 
@@ -24,7 +24,7 @@
 
 #### Courses
 
-###### edX, Berkeley California - Agile Development Using Ruby on Rails | [source](https://www.edx.org/professional-certificate/agile-development-using-ruby-rails) only lectures
+###### edX, Berkeley California - Agile Development Using Ruby on Rails | [source](https://www.edx.org/professional-certificate/agile-development-using-ruby-rails)
 
 ###### Udemy - Build eight Rails apps fast | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/eightapps) | course removed from Udemy
 
@@ -34,9 +34,9 @@
 
 #### Books
 
-###### Learning React: A Hands-On Guide to Building Web Applications Using React and Redux, Second edition [source](https://learning.oreilly.com/library/view/learning-react-a/9780134843582/)
-
 ###### Understanding ECMAScript 6: The Definitive Guide for JavaScript Developers | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/understanding-es6) | [source](https://www.amazon.com/Understanding-ECMAScript-Definitive-JavaScript-Developers/dp/1593277571)
+
+###### Learning React: A Hands-On Guide to Building Web Applications Using React and Redux, Second edition | [source](https://learning.oreilly.com/library/view/learning-react-a/9780134843582/)
 
 ###### Headfirst Javascript | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/headfirst_javascript) | [source](http://shop.oreilly.com/product/0636920027065.do)
 
@@ -44,7 +44,7 @@
 
 #### Courses
 
-###### Udemy - React - The Complete Guide (incl Hooks, React Router, Redux) [source](https://www.udemy.com/react-the-complete-guide-incl-redux/) | [My repo](https://github.com/ToTenMilan/books-courses/tree/master/react-router-redux)
+###### Udemy - React - The Complete Guide (incl Hooks, React Router, Redux) | [source](https://www.udemy.com/react-the-complete-guide-incl-redux/) | [My repo](https://github.com/ToTenMilan/books-courses/tree/master/react-router-redux)
 
 ###### Udemy - React Testing with Jest and Enzyme | [source](https://www.udemy.com/react-testing-with-jest-and-enzyme/)
 
@@ -74,7 +74,7 @@
 
 ###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) O'Reilly Safari - Docker Orchestration and Microservices, Second Edition [source](https://learning.oreilly.com/videos/docker-orchestration-and/9780134670805)
 
-###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) O'Reilly Safari - Develop and Operate Microservices on Kubernetes [source](https://learning.oreilly.com/videos/develop-and-operate/9781789135206)
+###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) O'Reilly Safari - Develop and Operate Microservices on Kubernetes | [source](https://learning.oreilly.com/videos/develop-and-operate/9781789135206)
 
 ------
 
@@ -110,9 +110,9 @@
 
 #### Courses
 
-###### edX, Harvard (received certificate) - CS50's Introduction to Computer Science [GitHub repo](https://github.com/ToTenMilan/oss/tree/master/intro_to_cs/cs50-psets-master) | [source](https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x)
+###### edX, Harvard (received certificate) - CS50's Introduction to Computer Science | [GitHub repo](https://github.com/ToTenMilan/oss/tree/master/intro_to_cs/cs50-psets-master) | [source](https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x)
 
-###### edX, Harvard - CS50's Computer Science for Business Professionals [source](https://www.edx.org/course/cs50s-computer-science-for-business-professionals)
+###### edX, Harvard - CS50's Computer Science for Business Professionals | [source](https://www.edx.org/course/cs50s-computer-science-for-business-professionals)
 
 ###### edX, MIT - Introduction to Computer Science and Programming Using Python | [GitHub repo](https://github.com/ToTenMilan/oss/tree/master/intro_to_cs/python_intro_mit) | [source](https://www.edx.org/course/introduction-to-computer-science-and-programming-using-python-2)
 
