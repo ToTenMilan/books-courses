@@ -6,7 +6,7 @@
 
 ###### Design Patterns in Ruby | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/ruby_design_patterns) | [source](https://www.amazon.com/Design-Patterns-Ruby-Russ-Olsen/dp/0321490452)
 
-###### APIs on Rails | [GitHub repo](https://github.com/ToTenMilan/api-on-rails) | [source](http://apionrails.icalialabs.com/book)
+###### APIs on Rails | [GitHub repo](https://github.com/ToTenMilan/api-on-rails) | [source](http://apionrails.icalialabs.com/book) | [My blog posts - APIs on Rails revised in 2017](https://medium.com/@ToTenMilan/apis-on-rails-in-2017-chapter-1-798a0c71d063)
 
 ###### Rails, Angular, Postgres and Bootstrap - second edition | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/shine) | [source](https://pragprog.com/book/dcbang2/rails-angular-postgres-and-bootstrap-second-edition)
 
