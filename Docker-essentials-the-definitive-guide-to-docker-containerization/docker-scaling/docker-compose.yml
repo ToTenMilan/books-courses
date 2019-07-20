@@ -1,0 +1,16 @@
+version: '3'
+services:
+  flask:
+    build: .
+    volumes:
+      - ./py:/src
+    environment:
+      - FLASK_APP=/src/app.py
+  nginx:
+    image: nginx:latest
+    ports:
+      - "2000:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - flask

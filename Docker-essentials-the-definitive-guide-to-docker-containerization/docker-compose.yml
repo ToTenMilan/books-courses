@@ -1,0 +1,20 @@
+version: '3'
+services: 
+  python:
+    image: python:3
+    container_name: my_py
+    volumes:
+      - .:/src
+    command: python3 /src/run.py
+    restart: always
+  mysql:
+    image: mysql:latest
+    container_name: my_mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=abc123
+    restart: always
+  ubuntu:
+    image: ubuntu:latest
+    container_name: my_ubuntu
+    command: echo "Hello from ubuntu"
+    restart: always
