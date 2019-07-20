@@ -120,6 +120,14 @@
 
 ------
 
+## C11
+
+#### Books
+
+###### C Programming Absolute Beginner's Guide | [source](https://www.amazon.com/Programming-Absolute-Beginners-Guide-Progr-ebook/dp/B00EANJ09U)
+
+------
+
 ## Python
 
 #### Books
