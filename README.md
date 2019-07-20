@@ -20,7 +20,11 @@
 
 ###### The Well-Grounded Rubyist, Second Edition | [source](https://www.manning.com/books/the-well-grounded-rubyist-second-edition)
 
+###### why’s (poignant) guide to ruby | [source](http://www.rubyinside.com/media/poignant-guide.pdf)
+
 #### Courses
+
+###### edX, Berkeley California - Agile Development Using Ruby on Rails | [source](https://www.edx.org/professional-certificate/agile-development-using-ruby-rails) only lectures
 
 ###### Udemy - Build eight Rails apps fast | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/eightapps) | course removed from Udemy
 
@@ -98,10 +102,36 @@
 
 #### Courses
 
-###### Beginning Linux System Administration | [source](https://learning.oreilly.com/videos/beginning-linux-system/9780134589329) 
+###### Beginning Linux System Administration | [source](https://learning.oreilly.com/videos/beginning-linux-system/9780134589329)
+
+------
+
+## General programming
+
+#### Courses
+
+###### edX, Harvard (received certificate) - CS50's Introduction to Computer Science [GitHub repo](https://github.com/ToTenMilan/oss/tree/master/intro_to_cs/cs50-psets-master) | [source](https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x)
+
+###### edX, Harvard - CS50's Computer Science for Business Professionals [source](https://www.edx.org/course/cs50s-computer-science-for-business-professionals)
+
+###### edX, MIT - Introduction to Computer Science and Programming Using Python | [GitHub repo](https://github.com/ToTenMilan/oss/tree/master/intro_to_cs/python_intro_mit) | [source](https://www.edx.org/course/introduction-to-computer-science-and-programming-using-python-2)
 
 ------
 
 ## Python
 
+#### Books
+
 ###### Headfirst Python | [source](http://www.headfirstlabs.com/books/hfpython/)
+
+###### Learning Python Testing | [source](https://learning.oreilly.com/library/view/learning-python-testing/9781783553211/)
+
+#### Courses
+
+------
+
+## Other related
+
+#### Courses
+
+###### Coursera - Learning How to Learn: Powerful mental tools to help you master tough subjects | [source](https://www.coursera.org/learn/learning-how-to-learn?utm_medium=email&utm_source=marketing&utm_campaign=jILNcKZLEeeHzesekhi9HA)
