@@ -68,7 +68,7 @@
 
 ------
 
-## DevOps
+## DevOps / Docker / Kubernetes
 
 #### Courses
 
