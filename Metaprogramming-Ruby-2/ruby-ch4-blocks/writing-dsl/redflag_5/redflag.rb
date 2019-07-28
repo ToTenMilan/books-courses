@@ -35,9 +35,11 @@ lambda { # Shared scope
 load 'events.rb'
 
 each_event do |event|
+  env = Object.new # execute events in "Clean Room" to make them as independent as possible
   each_setup do |setup|
     # setup.call
-    setup_call(&setup)
+    # setup_call(&setup)
+    env.instance_eval &setup # evaluale in context of an Object instance
   end
   # puts "ALERT: ​#{event[:description]}​"​ ​if​ event[:condition].call
   event_call(event[:description], &event[:condition])
