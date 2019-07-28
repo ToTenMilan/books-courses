@@ -3,7 +3,8 @@ def math(a, b)
 end
 
 def do_math(a, b, &operation) # '&' converts passed block to a proc (only pass, dont execute)
-  math(a, b, &operation) # '&' converts proc to block (execute as 'math(a, b) { ... })
+  math(a, b, &operation) # '&' converts proc to block (math(a, b) { operation.call(a, b) })
+  # math(a, b) { operation.call(a, b) }
 end
 
 p do_math(2,3) { |x, y| x * y } # this block will be converted to proc by '&' in method definition
