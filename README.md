@@ -82,7 +82,7 @@
 
 ------
 
-## Networking
+## Computer Networks
 
 #### Books
 
@@ -122,9 +122,11 @@
 
 ------
 
-## C11
+## C language
 
 #### Books
+
+###### Programming in C | [source](https://www.amazon.com/Programming-3rd-Stephen-G-Kochan/dp/0672326663)
 
 ###### C Programming Absolute Beginner's Guide | [source](https://www.amazon.com/Programming-Absolute-Beginners-Guide-Progr-ebook/dp/B00EANJ09U)
 
