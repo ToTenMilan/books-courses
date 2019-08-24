@@ -2,7 +2,7 @@
 
 #### Books
 
-###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Metaprogramming Ruby 2 | [source](https://learning.oreilly.com/library/view/metaprogramming-ruby-2/9781941222751/f_0009.html)
+###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Metaprogramming Ruby 2 [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Metaprogramming-Ruby-2) | [source](https://learning.oreilly.com/library/view/metaprogramming-ruby-2/9781941222751/f_0009.html)
 
 ###### Design Patterns in Ruby | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/ruby_design_patterns) | [source](https://www.amazon.com/Design-Patterns-Ruby-Russ-Olsen/dp/0321490452)
 
@@ -19,6 +19,8 @@
 ###### Agile Web Development with Rails 5 | [GitHub repo](https://github.com/ToTenMilan/Agile-WebDev-with-Rails-5) | [source](https://www.amazon.com/Agile-Web-Development-Rails-5/dp/1680501712)
 
 ###### The Well-Grounded Rubyist, Second Edition | [source](https://www.manning.com/books/the-well-grounded-rubyist-second-edition)
+
+###### Beginning Ruby - From Novice to Professional | [source](https://www.apress.com/gp/book/9781484212790)
 
 ###### why’s (poignant) guide to ruby | [source](http://www.rubyinside.com/media/poignant-guide.pdf)
 
@@ -140,7 +142,17 @@
 
 ------
 
-## Other related
+## Soft skills
+
+#### Books
+
+###### How to Win Friends and Influence People | [source](https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034)
+
+###### Triggers: Creating Behavior That Lasts - Becoming the Person You Want to Be | [source](https://www.amazon.com/Triggers-Creating-Behavior-Lasts-Becoming-Person/dp/0804141231)
+
+###### Kiedy kropla drąży skałę, czyli droga do mistrzostwa w komunikacji perswazyjnej (inspired by Cialdini's "Influence") | [source](https://helion.pl/ksiazki/kiedy-kropla-drazy-skale-czyli-droga-do-mistrzostwa-w-komunikacji-perswazyjnej-aleksander-binsztok,kropla.htm#format/e)
+
+###### Rich dad, Poor dad | [source](https://www.amazon.com/Rich-Dad-Poor-Teach-Middle/dp/1543626610)
 
 #### Courses
 
