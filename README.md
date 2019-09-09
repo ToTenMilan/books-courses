@@ -154,6 +154,8 @@
 
 ###### Kiedy kropla drąży skałę, czyli droga do mistrzostwa w komunikacji perswazyjnej (inspired by Cialdini's "Influence") | [source](https://helion.pl/ksiazki/kiedy-kropla-drazy-skale-czyli-droga-do-mistrzostwa-w-komunikacji-perswazyjnej-aleksander-binsztok,kropla.htm#format/e)
 
+###### The Millionaire Fastlane: Crack the Code to Wealth and Live Rich for a Lifetime! | [source](https://www.amazon.com/Millionaire-Fastlane-Crack-Wealth-Lifetime/dp/0984358102)
+
 ###### Rich dad, Poor dad | [source](https://www.amazon.com/Rich-Dad-Poor-Teach-Middle/dp/1543626610)
 
 #### Courses
