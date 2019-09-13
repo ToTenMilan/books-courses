@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    builder (3.2.3)
+    markaby (0.9.0)
+      builder
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  markaby
+
+BUNDLED WITH
+   1.17.2
