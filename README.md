@@ -2,6 +2,8 @@
 
 #### Books
 
+###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Component-Based Rails Applications: Large Domains under Control | [GitHub repo]() | [source](https://www.cbra.info/book/index.html)
+
 ###### Metaprogramming Ruby 2 | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Metaprogramming-Ruby-2) | [source](https://learning.oreilly.com/library/view/metaprogramming-ruby-2/9781941222751/f_0009.html)
 
 ###### Design Patterns in Ruby | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/ruby_design_patterns) | [source](https://www.amazon.com/Design-Patterns-Ruby-Russ-Olsen/dp/0321490452)

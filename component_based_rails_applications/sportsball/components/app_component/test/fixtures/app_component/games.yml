@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2019-09-21 16:43:36
+  location: MyString
+  first_team_id: 1
+  second_team_id: 1
+  winning_team: 1
+  first_team_score: 1
+  second_team_score: 1
+
+two:
+  date: 2019-09-21 16:43:36
+  location: MyString
+  first_team_id: 1
+  second_team_id: 1
+  winning_team: 1
+  first_team_score: 1
+  second_team_score: 1
