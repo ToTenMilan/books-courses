@@ -13,9 +13,3 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
-
-# workaround the fact that original trueskill is from 2011, and below fork is from 2014.
-# Has to be bundled from component directory instead of app directory, because bundling from app directory would ignore below lines
-gem "trueskill",
-  git: "https://github.com/benjaminleesmith/trueskill",
-  ref: "e404f45af5b3fb86982881ce064a9c764cc6a901"

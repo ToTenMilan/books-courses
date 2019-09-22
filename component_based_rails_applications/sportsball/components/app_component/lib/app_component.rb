@@ -1,7 +1,7 @@
-require 'slim-rails'
-require 'saulabs/trueskill'
+require "app_component/engine"
+# require "slim-rails"
 
 module AppComponent
-  require "app_component/engine"
+  # require "app_component/engine"
   # Your code goes here...
 end
