@@ -17,3 +17,5 @@ module Sportsball
     # the framework and any gems in your application.
   end
 end
+
+# Rails.autoloaders.logger = method(:puts)
