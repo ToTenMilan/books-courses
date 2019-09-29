@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+
+gem 'get_process_mem', '~> 0.2.4'
+gem 'fiddle', '~> 1.0'
+gem 'chunky_png', '~> 1.3', '>= 1.3.11'

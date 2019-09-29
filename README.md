@@ -2,7 +2,9 @@
 
 #### Books
 
-###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Component-Based Rails Applications: Large Domains under Control | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/component_based_rails_applications/sportsball) | [source](https://www.cbra.info/book/index.html)
+###### ![In Progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Programowanie w języku Ruby - mikrousługi i konteneryzacja | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master//ruby-mikrouslugi-konteneryzacja) | [source](https://helion.pl/ksiazki/programowanie-w-jezyku-ruby-mikrouslugi-i-konteneryzacja-michal-sobczak,prumik.htm)
+
+###### ![Halted](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Component-Based Rails Applications: Large Domains under Control | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/component_based_rails_applications/sportsball) | [source](https://www.cbra.info/book/index.html)
 
 ###### Metaprogramming Ruby 2 | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Metaprogramming-Ruby-2) | [source](https://learning.oreilly.com/library/view/metaprogramming-ruby-2/9781941222751/f_0009.html)
 
@@ -68,7 +70,7 @@
 
 #### Books
 
-###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Microservice Patterns and Best Practices|  [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Microservice-Patterns-and-Best-Practices) | [source](https://learning.oreilly.com/library/view/microservice-patterns-and/9781788474030/) 
+###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Microservice Patterns and Best Practices | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Microservice-Patterns-and-Best-Practices) | [source](https://learning.oreilly.com/library/view/microservice-patterns-and/9781788474030/) 
 
 ------
 
