@@ -2,6 +2,8 @@
 
 #### Books
 
+###### ![In Progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Practical Object Oriented Design in Ruby | [GitHub repo]() | [source](https://www.poodr.com/)
+
 ###### ![In Progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Programowanie w języku Ruby - mikrousługi i konteneryzacja | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/ruby-mikrouslugi-konteneryzacja) | [source](https://helion.pl/ksiazki/programowanie-w-jezyku-ruby-mikrouslugi-i-konteneryzacja-michal-sobczak,prumik.htm)
 
 ###### ![Halted](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Component-Based Rails Applications: Large Domains under Control | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/component_based_rails_applications/sportsball) | [source](https://www.cbra.info/book/index.html)
