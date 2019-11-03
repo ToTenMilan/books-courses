@@ -1,3 +1,4 @@
+############# TEMPLATE PATTERN - example ####################
 ### promote common behavior to abstract class ####
 # requirements:
 # • Bicycles have a chain and a tire size.
