@@ -1,3 +1,4 @@
+### situation where Wheel depends on Gear ()
 class Gear
   attr_reader :chainring, :cog
   def initialize(chainring, cog)
