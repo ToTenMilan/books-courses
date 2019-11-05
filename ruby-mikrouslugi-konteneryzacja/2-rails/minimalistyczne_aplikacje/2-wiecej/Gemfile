@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+ruby '2.5.1'
+
+gem 'railties', '5.2.1', require: %w(action_controller rails)
+gem 'coderay'
+gem 'markaby'
+
+group :test do
+  gem "rack-test", require: false
+end

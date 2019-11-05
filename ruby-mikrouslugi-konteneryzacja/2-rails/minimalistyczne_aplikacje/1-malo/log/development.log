@@ -1,0 +1,7 @@
+Started GET "/" for 127.0.0.1 at 2019-10-16 21:14:34 +0200
+Processing by HelloController#world as HTML
+  Rendering inline template
+  Rendered inline template (0.7ms)
+Completed 200 OK in 6ms (Views: 5.4ms)
+
+

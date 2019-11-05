@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+
+gem 'bunny'
+# gem 'activesupport', '~> 6.0'
+gem 'rails'
