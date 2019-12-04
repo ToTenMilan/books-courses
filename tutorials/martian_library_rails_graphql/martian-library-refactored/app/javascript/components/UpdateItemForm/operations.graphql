@@ -1,0 +1,24 @@
+#import '../../fragments/Item.graphql'
+
+mutation UpdateitemMutation(
+  $id: ID!
+  $title: String!
+  $description: String
+  $imageUrl: String
+) {
+  updateItem(
+    id: $id
+    attributes: {
+      title: $title
+      description: $description
+      imageUrl: $imageUrl
+    }
+  ) {
+    item {
+      ...ItemFragment
+    }
+    errors {
+      fullMessages
+    }
+  }
+}
