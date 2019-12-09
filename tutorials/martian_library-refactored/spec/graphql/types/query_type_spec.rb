@@ -16,8 +16,10 @@ RSpec.describe Types::QueryType do
     end
 
     it 'returns all items' do
+      result_to_compare = items.map { |item| { 'title' => item.title }}
+      pp result_to_compare # => [{"title"=>"item-1"}, {"title"=>"item-2"}]
       expect(result.dig('data', 'items')).to match_array(
-        items.map { |item| { 'title' => item.title }}
+        result_to_compare
       )
     end
   end
