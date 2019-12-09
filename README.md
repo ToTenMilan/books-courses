@@ -2,7 +2,9 @@
 
 #### Books
 
-###### ![In Progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Practical Object Oriented Design in Ruby | [GitHub repo]() | [source](https://www.poodr.com/)
+###### ![In Progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Effective Testing with RSpec 3 | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Effective-testing-with-RSpec3) | [source](https://www.oreilly.com/library/view/effective-testing-with/9781680502770/)
+
+###### Practical Object Oriented Design in Ruby | [GitHub repo]() | [source](https://www.poodr.com/)
 
 ###### ![In Progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Programowanie w języku Ruby - mikrousługi i konteneryzacja | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/ruby-mikrouslugi-konteneryzacja) | [source](https://helion.pl/ksiazki/programowanie-w-jezyku-ruby-mikrouslugi-i-konteneryzacja-michal-sobczak,prumik.htm)
 
