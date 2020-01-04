@@ -103,4 +103,8 @@ RSpec.configure do |config|
 
   config.filter_gems_from_backtrace 'rack', 'rack-test', 'sequel', 'sinatra'
 
+  config.when_first_matching_example_defined(:db) do
+    # require file only if example is tagged as :db
+    require_relative 'support/db'
+  end
 end
