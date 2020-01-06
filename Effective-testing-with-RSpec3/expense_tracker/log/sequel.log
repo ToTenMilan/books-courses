@@ -1,0 +1,157 @@
+# Logfile created on 2020-01-06 13:59:26 +0100 by logger.rb/66358
+I, [2020-01-06T13:59:26.759392 #9816]  INFO -- : (0.000190s) PRAGMA foreign_keys = 1
+I, [2020-01-06T13:59:26.759479 #9816]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2020-01-06T13:59:26.759712 #9816]  INFO -- : (0.000099s) SELECT sqlite_version()
+I, [2020-01-06T13:59:26.761131 #9816]  INFO -- : (0.000039s) CREATE TABLE IF NOT EXISTS `schema_info` (`version` integer DEFAULT (0) NOT NULL)
+I, [2020-01-06T13:59:26.761313 #9816]  INFO -- : (0.000075s) SELECT * FROM `schema_info` LIMIT 1
+I, [2020-01-06T13:59:26.761508 #9816]  INFO -- : (0.000062s) SELECT 1 AS 'one' FROM `schema_info` LIMIT 1
+I, [2020-01-06T13:59:26.761706 #9816]  INFO -- : (0.000071s) SELECT count(*) AS 'count' FROM `schema_info` LIMIT 1
+I, [2020-01-06T13:59:26.761929 #9816]  INFO -- : (0.000104s) SELECT `version` FROM `schema_info` LIMIT 1
+I, [2020-01-06T13:59:26.770943 #9816]  INFO -- : (0.008442s) DELETE FROM `expenses`
+I, [2020-01-06T14:00:03.914444 #9927]  INFO -- : (0.000204s) PRAGMA foreign_keys = 1
+I, [2020-01-06T14:00:03.914532 #9927]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2020-01-06T14:00:03.914651 #9927]  INFO -- : (0.000074s) SELECT sqlite_version()
+I, [2020-01-06T14:00:03.914832 #9927]  INFO -- : (0.000052s) CREATE TABLE IF NOT EXISTS `schema_info` (`version` integer DEFAULT (0) NOT NULL)
+I, [2020-01-06T14:00:03.915032 #9927]  INFO -- : (0.000105s) SELECT * FROM `schema_info` LIMIT 1
+I, [2020-01-06T14:00:03.915212 #9927]  INFO -- : (0.000057s) SELECT 1 AS 'one' FROM `schema_info` LIMIT 1
+I, [2020-01-06T14:00:03.916839 #9927]  INFO -- : (0.000064s) SELECT count(*) AS 'count' FROM `schema_info` LIMIT 1
+I, [2020-01-06T14:00:03.917035 #9927]  INFO -- : (0.000066s) SELECT `version` FROM `schema_info` LIMIT 1
+I, [2020-01-06T14:00:03.937534 #9927]  INFO -- : (0.020315s) DELETE FROM `expenses`
+I, [2020-01-06T14:00:03.937621 #9927]  INFO -- : Starting example: a `before(:suite)` hook
+I, [2020-01-06T14:00:03.941780 #9927]  INFO -- : (0.000062s) BEGIN
+I, [2020-01-06T14:00:03.942256 #9927]  INFO -- : (0.000144s) SELECT * FROM `expenses` WHERE (`date` = '2017-01-01')
+I, [2020-01-06T14:00:03.944237 #9927]  INFO -- : (0.001393s) ROLLBACK
+I, [2020-01-06T14:00:03.944961 #9927]  INFO -- : (0.000022s) BEGIN
+I, [2020-01-06T14:00:03.945391 #9927]  INFO -- : (0.000209s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-01-01')
+I, [2020-01-06T14:00:03.945682 #9927]  INFO -- : (0.000086s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:00:03.946810 #9927]  INFO -- : (0.001033s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-01-01')
+I, [2020-01-06T14:00:03.947069 #9927]  INFO -- : (0.000059s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:00:03.947214 #9927]  INFO -- : (0.000035s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-01-02')
+I, [2020-01-06T14:00:03.947457 #9927]  INFO -- : (0.000121s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:00:03.949019 #9927]  INFO -- : (0.001439s) SELECT * FROM `expenses` WHERE (`date` = '2017-01-01')
+I, [2020-01-06T14:00:03.957177 #9927]  INFO -- : (0.000110s) ROLLBACK
+I, [2020-01-06T14:00:03.957800 #9927]  INFO -- : (0.000022s) BEGIN
+I, [2020-01-06T14:00:03.964774 #9927]  INFO -- : (0.003183s) SELECT count(*) AS 'count' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:00:03.965194 #9927]  INFO -- : (0.000035s) ROLLBACK
+I, [2020-01-06T14:00:03.965725 #9927]  INFO -- : (0.000020s) BEGIN
+I, [2020-01-06T14:00:03.966021 #9927]  INFO -- : (0.000118s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-01-01')
+I, [2020-01-06T14:00:03.966242 #9927]  INFO -- : (0.000074s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:00:03.966601 #9927]  INFO -- : (0.000112s) SELECT * FROM `expenses`
+I, [2020-01-06T14:00:03.968438 #9927]  INFO -- : (0.000087s) ROLLBACK
+I, [2020-01-06T14:00:03.968972 #9927]  INFO -- : (0.000020s) BEGIN
+I, [2020-01-06T14:00:03.969350 #9927]  INFO -- : (0.000075s) SELECT count(*) AS 'count' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:00:03.969456 #9927]  INFO -- : (0.000020s) ROLLBACK
+I, [2020-01-06T14:00:03.969861 #9927]  INFO -- : (0.000019s) BEGIN
+I, [2020-01-06T14:00:03.989336 #9927]  INFO -- : (0.000202s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-06-10')
+I, [2020-01-06T14:00:03.989645 #9927]  INFO -- : (0.000140s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:00:03.995308 #9927]  INFO -- : (0.000058s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Zoo', 15.25, '2017-06-10')
+I, [2020-01-06T14:00:03.995617 #9927]  INFO -- : (0.000072s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:00:03.996389 #9927]  INFO -- : (0.000071s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Whole Foods', 95.2, '2017-06-11')
+I, [2020-01-06T14:00:03.996623 #9927]  INFO -- : (0.000061s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:00:03.998343 #9927]  INFO -- : (0.000128s) SELECT * FROM `expenses` WHERE (`date` = '2017-06-10')
+I, [2020-01-06T14:00:03.998884 #9927]  INFO -- : (0.000140s) ROLLBACK
+I, [2020-01-06T14:00:04.012768 #9927]  INFO -- : ending example: an `after(:suite)` hook
+I, [2020-01-06T14:01:26.952537 #10075]  INFO -- : (0.000188s) PRAGMA foreign_keys = 1
+I, [2020-01-06T14:01:26.952631 #10075]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2020-01-06T14:01:26.952761 #10075]  INFO -- : (0.000083s) SELECT sqlite_version()
+I, [2020-01-06T14:01:26.953168 #10075]  INFO -- : (0.000039s) CREATE TABLE IF NOT EXISTS `schema_info` (`version` integer DEFAULT (0) NOT NULL)
+I, [2020-01-06T14:01:26.954693 #10075]  INFO -- : (0.001419s) SELECT * FROM `schema_info` LIMIT 1
+I, [2020-01-06T14:01:26.954948 #10075]  INFO -- : (0.000067s) SELECT 1 AS 'one' FROM `schema_info` LIMIT 1
+I, [2020-01-06T14:01:26.955275 #10075]  INFO -- : (0.000076s) SELECT count(*) AS 'count' FROM `schema_info` LIMIT 1
+I, [2020-01-06T14:01:26.955584 #10075]  INFO -- : (0.000197s) SELECT `version` FROM `schema_info` LIMIT 1
+I, [2020-01-06T14:01:26.964443 #10075]  INFO -- : (0.008633s) DELETE FROM `expenses`
+I, [2020-01-06T14:01:26.966382 #10075]  INFO -- : ending example: responds with a 200
+I, [2020-01-06T14:01:26.967149 #10075]  INFO -- : ending example: returns the expense records as JSON
+I, [2020-01-06T14:01:26.967534 #10075]  INFO -- : ending example: responds with a 200 (OK)
+I, [2020-01-06T14:01:26.968727 #10075]  INFO -- : ending example: returns an empty array as JSON
+I, [2020-01-06T14:01:26.969141 #10075]  INFO -- : ending example: responds with 200 (OK)
+I, [2020-01-06T14:01:26.969341 #10075]  INFO -- : ending example: returns the expense id
+I, [2020-01-06T14:01:26.971271 #10075]  INFO -- : ending example: returns an error message
+I, [2020-01-06T14:01:26.971761 #10075]  INFO -- : ending example: responds with a 422 (Unprocessable Entity)
+I, [2020-01-06T14:01:26.972288 #10075]  INFO -- : (0.000057s) BEGIN
+I, [2020-01-06T14:01:26.972399 #10075]  INFO -- : ending example: records submitted expenses
+I, [2020-01-06T14:01:26.974158 #10075]  INFO -- : (0.000058s) ROLLBACK
+I, [2020-01-06T14:01:26.978785 #10075]  INFO -- : (0.000041s) BEGIN
+I, [2020-01-06T14:01:26.978952 #10075]  INFO -- : ending example: resects the expense as invalid
+I, [2020-01-06T14:01:26.979033 #10075]  INFO -- : (0.000022s) ROLLBACK
+I, [2020-01-06T14:01:26.981384 #10075]  INFO -- : (0.000034s) BEGIN
+I, [2020-01-06T14:01:26.981505 #10075]  INFO -- : ending example: successfully saves the expense to db
+I, [2020-01-06T14:01:26.981586 #10075]  INFO -- : (0.000023s) ROLLBACK
+I, [2020-01-06T14:01:26.983496 #10075]  INFO -- : (0.000035s) BEGIN
+I, [2020-01-06T14:01:26.983645 #10075]  INFO -- : ending example: rejects the expense as invalid
+I, [2020-01-06T14:01:26.983724 #10075]  INFO -- : (0.000021s) ROLLBACK
+I, [2020-01-06T14:01:26.984257 #10075]  INFO -- : (0.000019s) BEGIN
+I, [2020-01-06T14:01:26.984331 #10075]  INFO -- : ending example: returns a blank array wharn there are no matching expenses
+I, [2020-01-06T14:01:26.984401 #10075]  INFO -- : (0.000018s) ROLLBACK
+I, [2020-01-06T14:01:26.985893 #10075]  INFO -- : (0.000028s) BEGIN
+I, [2020-01-06T14:01:26.985975 #10075]  INFO -- : ending example: returns all expenses for the provided date
+I, [2020-01-06T14:01:26.986181 #10075]  INFO -- : (0.000159s) ROLLBACK
+I, [2020-01-06T14:01:52.092267 #10208]  INFO -- : (0.000187s) PRAGMA foreign_keys = 1
+I, [2020-01-06T14:01:52.092929 #10208]  INFO -- : (0.000023s) PRAGMA case_sensitive_like = 1
+I, [2020-01-06T14:01:52.093666 #10208]  INFO -- : (0.000323s) SELECT sqlite_version()
+I, [2020-01-06T14:01:52.094123 #10208]  INFO -- : (0.000041s) CREATE TABLE IF NOT EXISTS `schema_info` (`version` integer DEFAULT (0) NOT NULL)
+I, [2020-01-06T14:01:52.094315 #10208]  INFO -- : (0.000074s) SELECT * FROM `schema_info` LIMIT 1
+I, [2020-01-06T14:01:52.094487 #10208]  INFO -- : (0.000059s) SELECT 1 AS 'one' FROM `schema_info` LIMIT 1
+I, [2020-01-06T14:01:52.094706 #10208]  INFO -- : (0.000099s) SELECT count(*) AS 'count' FROM `schema_info` LIMIT 1
+I, [2020-01-06T14:01:52.094910 #10208]  INFO -- : (0.000063s) SELECT `version` FROM `schema_info` LIMIT 1
+I, [2020-01-06T14:01:52.100384 #10208]  INFO -- : (0.005355s) DELETE FROM `expenses`
+I, [2020-01-06T14:01:52.100860 #10208]  INFO -- : (0.000036s) BEGIN
+I, [2020-01-06T14:01:52.100980 #10208]  INFO -- : Starting example: records submitted expenses
+I, [2020-01-06T14:01:52.122760 #10208]  INFO -- : (0.000174s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-06-10')
+I, [2020-01-06T14:01:52.123152 #10208]  INFO -- : (0.000170s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:01:52.134985 #10208]  INFO -- : (0.000063s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Zoo', 15.25, '2017-06-10')
+I, [2020-01-06T14:01:52.135218 #10208]  INFO -- : (0.000073s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:01:52.137361 #10208]  INFO -- : (0.000043s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Whole Foods', 95.2, '2017-06-11')
+I, [2020-01-06T14:01:52.137576 #10208]  INFO -- : (0.000062s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:01:52.143907 #10208]  INFO -- : (0.000509s) SELECT * FROM `expenses` WHERE (`date` = '2017-06-10')
+I, [2020-01-06T14:01:52.149250 #10208]  INFO -- : ending example: records submitted expenses
+I, [2020-01-06T14:01:52.149527 #10208]  INFO -- : (0.000145s) ROLLBACK
+I, [2020-01-06T14:01:52.153994 #10208]  INFO -- : (0.000028s) BEGIN
+I, [2020-01-06T14:01:52.154068 #10208]  INFO -- : Starting example: rejects the expense as invalid
+I, [2020-01-06T14:01:52.157360 #10208]  INFO -- : (0.000089s) SELECT count(*) AS 'count' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:01:52.157436 #10208]  INFO -- : ending example: rejects the expense as invalid
+I, [2020-01-06T14:01:52.157509 #10208]  INFO -- : (0.000022s) ROLLBACK
+I, [2020-01-06T14:01:52.158823 #10208]  INFO -- : (0.000019s) BEGIN
+I, [2020-01-06T14:01:52.158877 #10208]  INFO -- : Starting example: successfully saves the expense to db
+I, [2020-01-06T14:01:52.161949 #10208]  INFO -- : (0.000240s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-01-01')
+I, [2020-01-06T14:01:52.162413 #10208]  INFO -- : (0.000070s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:01:52.162648 #10208]  INFO -- : (0.000115s) SELECT * FROM `expenses`
+I, [2020-01-06T14:01:52.163741 #10208]  INFO -- : ending example: successfully saves the expense to db
+I, [2020-01-06T14:01:52.163980 #10208]  INFO -- : (0.000155s) ROLLBACK
+I, [2020-01-06T14:01:52.164401 #10208]  INFO -- : (0.000018s) BEGIN
+I, [2020-01-06T14:01:52.164448 #10208]  INFO -- : Starting example: resects the expense as invalid
+I, [2020-01-06T14:01:52.164720 #10208]  INFO -- : (0.000071s) SELECT count(*) AS 'count' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:01:52.164785 #10208]  INFO -- : ending example: resects the expense as invalid
+I, [2020-01-06T14:01:52.164963 #10208]  INFO -- : (0.000132s) ROLLBACK
+I, [2020-01-06T14:01:52.165422 #10208]  INFO -- : (0.000046s) BEGIN
+I, [2020-01-06T14:01:52.165474 #10208]  INFO -- : Starting example: returns all expenses for the provided date
+I, [2020-01-06T14:01:52.165680 #10208]  INFO -- : (0.000090s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-01-01')
+I, [2020-01-06T14:01:52.165869 #10208]  INFO -- : (0.000073s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:01:52.166038 #10208]  INFO -- : (0.000050s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-01-01')
+I, [2020-01-06T14:01:52.166216 #10208]  INFO -- : (0.000071s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:01:52.166356 #10208]  INFO -- : (0.000047s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-01-02')
+I, [2020-01-06T14:01:52.166507 #10208]  INFO -- : (0.000051s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2020-01-06T14:01:52.166741 #10208]  INFO -- : (0.000138s) SELECT * FROM `expenses` WHERE (`date` = '2017-01-01')
+I, [2020-01-06T14:01:52.166999 #10208]  INFO -- : ending example: returns all expenses for the provided date
+I, [2020-01-06T14:01:52.167104 #10208]  INFO -- : (0.000055s) ROLLBACK
+I, [2020-01-06T14:01:52.167397 #10208]  INFO -- : (0.000018s) BEGIN
+I, [2020-01-06T14:01:52.167440 #10208]  INFO -- : Starting example: returns a blank array wharn there are no matching expenses
+I, [2020-01-06T14:01:52.167646 #10208]  INFO -- : (0.000102s) SELECT * FROM `expenses` WHERE (`date` = '2017-01-01')
+I, [2020-01-06T14:01:52.167695 #10208]  INFO -- : ending example: returns a blank array wharn there are no matching expenses
+I, [2020-01-06T14:01:52.167754 #10208]  INFO -- : (0.000018s) ROLLBACK
+I, [2020-01-06T14:01:52.168249 #10208]  INFO -- : Starting example: responds with a 200 (OK)
+I, [2020-01-06T14:01:52.175107 #10208]  INFO -- : ending example: responds with a 200 (OK)
+I, [2020-01-06T14:01:52.175404 #10208]  INFO -- : Starting example: returns an empty array as JSON
+I, [2020-01-06T14:01:52.176222 #10208]  INFO -- : ending example: returns an empty array as JSON
+I, [2020-01-06T14:01:52.176513 #10208]  INFO -- : Starting example: responds with a 200
+I, [2020-01-06T14:01:52.177259 #10208]  INFO -- : ending example: responds with a 200
+I, [2020-01-06T14:01:52.177461 #10208]  INFO -- : Starting example: returns the expense records as JSON
+I, [2020-01-06T14:01:52.178329 #10208]  INFO -- : ending example: returns the expense records as JSON
+I, [2020-01-06T14:01:52.178874 #10208]  INFO -- : Starting example: responds with a 422 (Unprocessable Entity)
+I, [2020-01-06T14:01:52.179803 #10208]  INFO -- : ending example: responds with a 422 (Unprocessable Entity)
+I, [2020-01-06T14:01:52.180001 #10208]  INFO -- : Starting example: returns an error message
+I, [2020-01-06T14:01:52.180816 #10208]  INFO -- : ending example: returns an error message
+I, [2020-01-06T14:01:52.181163 #10208]  INFO -- : Starting example: returns the expense id
+I, [2020-01-06T14:01:52.182059 #10208]  INFO -- : ending example: returns the expense id
+I, [2020-01-06T14:01:52.182271 #10208]  INFO -- : Starting example: responds with 200 (OK)
+I, [2020-01-06T14:01:52.182966 #10208]  INFO -- : ending example: responds with 200 (OK)
