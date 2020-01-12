@@ -1,0 +1,4 @@
+# to experinment with matchers
+
+require 'rspec/expectations'
+include RSpec::Matchers
