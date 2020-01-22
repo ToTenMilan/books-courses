@@ -74,7 +74,7 @@
 
 #### Books
 
-###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Microservice Patterns and Best Practices | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Microservice-Patterns-and-Best-Practices) | [source](https://learning.oreilly.com/library/view/microservice-patterns-and/9781788474030/) 
+###### ![Halted](https://img.shields.io/badge/halted-%20-lightgrey) Microservice Patterns and Best Practices | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Microservice-Patterns-and-Best-Practices) | [source](https://learning.oreilly.com/library/view/microservice-patterns-and/9781788474030/) 
 
 ------
 
@@ -84,9 +84,9 @@
 
 ###### O'Reilly Safari - Docker Essentials: The Definitive Guide to Docker Containerization | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Docker-essentials-the-definitive-guide-to-docker-containerization) | [source](https://learning.oreilly.com/videos/docker-essentials-the/9781634625814)
 
-###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) O'Reilly Safari - Docker Orchestration and Microservices, Second Edition | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Docker-essentials-the-definitive-guide-to-docker-containerization) | [source](https://learning.oreilly.com/videos/docker-orchestration-and/9780134670805)
+###### ![Halted](https://img.shields.io/badge/halted-%20-lightgrey) O'Reilly Safari - Docker Orchestration and Microservices, Second Edition | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Docker-essentials-the-definitive-guide-to-docker-containerization) | [source](https://learning.oreilly.com/videos/docker-orchestration-and/9780134670805)
 
-###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) O'Reilly Safari - Develop and Operate Microservices on Kubernetes | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Develop-and-operate-Microservices-on-Kubernetes) | [source](https://learning.oreilly.com/videos/develop-and-operate/9781789135206)
+###### ![Halted](https://img.shields.io/badge/halted-%20-lightgrey) O'Reilly Safari - Develop and Operate Microservices on Kubernetes | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Develop-and-operate-Microservices-on-Kubernetes) | [source](https://learning.oreilly.com/videos/develop-and-operate/9781789135206)
 
 ------
 
@@ -103,6 +103,10 @@
 #### Courses
 
 ###### Udemy - Learn Website Hacking / Penetration Testing From Scratch | [source](https://www.udemy.com/course/learn-website-hacking-penetration-testing-from-scratch/)
+
+#### Live workshops
+
+###### Niebezpiecznik - Exploiting and Securing web applications | [source](https://niebezpiecznik.pl/szkolenia/atakowanie-ochrona-www/)
 
 ------
 
