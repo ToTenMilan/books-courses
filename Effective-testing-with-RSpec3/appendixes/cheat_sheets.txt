@@ -1,0 +1,19 @@
+works without logging in
+
+
+CHEAT SHEETS
+
+RAILS:
+Rails spec types
+https://www.oreilly.com/library/view/effective-testing-with/9781680502770/f_0131.xhtml
+
+Rails matchers
+https://www.oreilly.com/library/view/effective-testing-with/9781680502770/f_0132.xhtml
+
+
+RUBY:
+value matchers
+https://www.oreilly.com/library/view/effective-testing-with/9781680502770/f_0134.xhtml
+
+block matchers
+https://learning.oreilly.com/library/view/effective-testing-with/9781680502770/f_0135.xhtml
