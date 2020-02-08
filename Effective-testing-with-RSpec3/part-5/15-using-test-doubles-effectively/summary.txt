@@ -1,0 +1,7 @@
+    Construct your test environment carefully.
+    Watch out for the “stubject.”
+    Know the risks of partial doubles.
+    Favor explicit dependency injection over more implicit techniques.
+    Avoid faking an interface you don’t control.
+    Look for high-fidelity fakes.
+    Wrap third-party interfaces.
