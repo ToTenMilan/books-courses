@@ -2,6 +2,8 @@
 
 #### Books
 
+###### Rails AntiPatterns: Best Practice Ruby on Rails refactoring | [GitHub repo]() | [source](https://www.oreilly.com/library/view/railstm-antipatterns-best/9780321620293/)
+
 ###### Effective Testing with RSpec 3 | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Effective-testing-with-RSpec3) | [source](https://www.oreilly.com/library/view/effective-testing-with/9781680502770/)
 
 ###### Practical Object Oriented Design in Ruby | [GitHub repo]() | [source](https://www.poodr.com/)
