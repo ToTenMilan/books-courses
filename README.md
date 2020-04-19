@@ -2,11 +2,11 @@
 
 #### Books
 
-###### ![In Progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Rails AntiPatterns: Best Practice Ruby on Rails refactoring | [GitHub repo]() | [source](https://www.oreilly.com/library/view/railstm-antipatterns-best/9780321620293/)
+###### ![In Progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Rails AntiPatterns: Best Practice Ruby on Rails refactoring | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Rails-AntiPatterns-best-practice-ruby-on-rails-refactoring) | [source](https://www.oreilly.com/library/view/railstm-antipatterns-best/9780321620293/)
 
 ###### Effective Testing with RSpec 3 | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Effective-testing-with-RSpec3) | [source](https://www.oreilly.com/library/view/effective-testing-with/9781680502770/)
 
-###### Practical Object Oriented Design in Ruby | [GitHub repo]() | [source](https://www.poodr.com/)
+###### Practical Object Oriented Design in Ruby | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Practical-Object-Oriented-Design-with-Ruby) | [source](https://www.poodr.com/)
 
 ###### ![In Progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Programowanie w języku Ruby - mikrousługi i konteneryzacja | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/ruby-mikrouslugi-konteneryzacja) | [source](https://helion.pl/ksiazki/programowanie-w-jezyku-ruby-mikrouslugi-i-konteneryzacja-michal-sobczak,prumik.htm)
 
@@ -42,7 +42,7 @@
 
 ###### Udemy - Build eight Rails apps fast | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/eightapps) | course removed from Udemy
 
-------
+---
 
 ## JavaScript / ES6 / React
 
@@ -62,7 +62,7 @@
 
 ###### Udemy - React Testing with Jest and Enzyme | [source](https://www.udemy.com/react-testing-with-jest-and-enzyme/)
 
-------
+---
 
 ## Architecture
 
@@ -70,7 +70,7 @@
 
 ###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Domain-Driven Design: Tackling Complexity in the Heart of Software | [source](https://learning.oreilly.com/library/view/domain-driven-design-tackling/0321125215/)
 
-------
+---
 
 ## Microservices
 
@@ -78,7 +78,7 @@
 
 ###### ![Halted](https://img.shields.io/badge/halted-%20-lightgrey) Microservice Patterns and Best Practices | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Microservice-Patterns-and-Best-Practices) | [source](https://learning.oreilly.com/library/view/microservice-patterns-and/9781788474030/)
 
-------
+---
 
 ## DevOps / Docker / Kubernetes
 
@@ -90,7 +90,7 @@
 
 ###### ![Halted](https://img.shields.io/badge/halted-%20-lightgrey) O'Reilly Safari - Develop and Operate Microservices on Kubernetes | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Develop-and-operate-Microservices-on-Kubernetes) | [source](https://learning.oreilly.com/videos/develop-and-operate/9781789135206)
 
-------
+---
 
 ## Computer Networks
 
@@ -98,7 +98,7 @@
 
 ###### Head First Networking | [source](http://shop.oreilly.com/product/9780596521561.do)
 
-------
+---
 
 ## Ethical Hacking
 
@@ -110,7 +110,7 @@
 
 ###### Niebezpiecznik - Exploiting and Securing web applications | [source](https://niebezpiecznik.pl/szkolenia/atakowanie-ochrona-www/)
 
-------
+---
 
 ## Linux
 
@@ -122,7 +122,7 @@
 
 ###### Beginning Linux System Administration | [source](https://learning.oreilly.com/videos/beginning-linux-system/9780134589329)
 
-------
+---
 
 ## General programming
 
@@ -134,7 +134,7 @@
 
 ###### edX, MIT - Introduction to Computer Science and Programming Using Python | [GitHub repo](https://github.com/ToTenMilan/oss/tree/master/intro_to_cs/python_intro_mit) | [source](https://www.edx.org/course/introduction-to-computer-science-and-programming-using-python-2)
 
-------
+---
 
 ## C language
 
@@ -144,7 +144,7 @@
 
 ###### C Programming Absolute Beginner's Guide | [source](https://www.amazon.com/Programming-Absolute-Beginners-Guide-Progr-ebook/dp/B00EANJ09U)
 
-------
+---
 
 ## Python
 
@@ -156,7 +156,7 @@
 
 #### Courses
 
-------
+---
 
 ## Soft skills
 
