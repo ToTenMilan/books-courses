@@ -1,0 +1,15 @@
+-# antipattern
+- if current_user && (current_user == @post.user || @post.editors.include?(current_user)) && @post.editable? && @post.user.active?
+  = link_to 'Edit', edit_post_path(@post)
+
+
+
+-# solution (in model, not in helper, because method is needed in contrller too, to restrict permissions)
+- if @post.editable_by?(current_user)
+  = link_to 'Edit', edit_post_path(@post)
+
+-# app/models/user.rb
+-#
+-# def editable_by?
+-#   # ...
+-# end

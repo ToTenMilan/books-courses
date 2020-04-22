@@ -1,0 +1,18 @@
+-# antipattern
+.div
+  .div
+    #span{style: 'font-size: 2em'}
+      Free nemo
+  .div
+    Free nemo
+    %span{style: 'font-style: italic'}
+      to the world
+
+
+-# solution
+#posts
+  .post#post_1
+    %h2 Free nemo
+    .body
+      Free nemo
+      %em to the world

@@ -1,0 +1,21 @@
+-# example of semantic HTML
+.div{class: 'post', id: "post_#{@post.id}"}
+  -# ...
+  %ol.comments
+    - @post.comments.each do |comment|
+      %li{class: 'comment', id: "comment_#{comment.id}"}
+        = comment.body
+
+-# solution ( < Rails 5.1) outputs the same HTML
+= div_for @post
+  %ol.comments
+    - @post.comments.each do |comment|
+      = content_tag_for :li, comment do
+        = comment.body
+
+
+
+-# note that form_for is also producing default class and id
+- form_for @users do |user|
+
+-# => <form action="/users/1" method="post" class="edit_user" id="edit_user_1"

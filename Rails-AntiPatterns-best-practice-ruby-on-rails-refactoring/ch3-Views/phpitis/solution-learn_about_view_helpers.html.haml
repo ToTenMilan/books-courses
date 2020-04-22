@@ -1,0 +1,97 @@
+
+-########################################
+-##### form_for helper
+-# < Rails 2
+= form_for :user, url: user_path(@user), html: {method: :put} do |form|
+  -# ...
+
+
+= form_for :user, url: users_path do |form|
+  -# ...
+
+
+-# >= Rails 2.1
+= form_for @user do |form|
+  -# ...
+
+
+
+
+-####################################
+-##### render helper
+-# antipattern
+- @posts.each do |post|
+  %h2= post.title
+  = format_content post.body
+  %p= link_to 'Email', mail_to(post.user.email)
+
+
+
+-# solution 1
+-# posts/index.html.haml
+- @posts.each do |post|
+  = render partial: 'post', object: 'post'
+
+-# posts/_post.html.haml
+%h2= post.title
+= format_content post.body
+%p= link_to 'Email', mail_to(post.user.email)
+
+
+-# solution 2 abstracted (the same html output as above)
+-# posts/index.html.haml
+= render partial: 'post', collection: @posts # takes care of looping
+
+-# posts/_post.html.haml (the same code as above)
+%h2= post.title
+= format_content post.body
+%p= link_to 'Email', mail_to(post.user.email)
+
+
+-# solution 3 more abstracted (the same html output as above)
+-# posts/index.html.haml
+= render @posts # finds partial and takes care of looping
+
+-# posts/_post.html.haml (the same code as above)
+%h2= post.title
+= format_content post.body
+%p= link_to 'Email', mail_to(post.user.email)
+
+
+
+
+-#######################################
+-##### yield in views
+-# example 1
+
+-# app/views/layouts/layout.html.haml
+%html
+  %head
+    %ul.nav
+      %li= link_to "Home", root_url
+      %li= link_to "Maps", maps_url
+      = yield :nav
+    .main
+      = yield
+
+-# different nav
+-# for logged in user:
+- content_for :nav
+  %li= link_to "Your Account", account_url
+  %li= link_to "Your Maps", user_maps_url(current_user)
+
+-# for logged out user:
+- content_for :nav
+  %li= link_to "Log in", login_url
+  %li= link_to "Sign up", signup_url
+
+
+
+-# example 2
+%body{ class: yield :body_class }
+
+-# app/views/static/home.html.haml
+- content_for :body_class, "home"
+
+-# app/views/static/contact.html.haml
+- content_for :body_class, "contact"
