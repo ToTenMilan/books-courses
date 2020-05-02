@@ -1,0 +1,8 @@
+Good gem must be well tested
+to test your gem:
+
+1. Always aim to separate gem from rails and write only unit tests
+
+2. If You need only the part of rails to test your gem, include only this part, not whole Rails
+
+3. If your gem is exercising every part of Rails's MVC, you need to embed a Rails app in tests
