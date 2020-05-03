@@ -3,3 +3,10 @@ class Account < ActiveRecord::Base
 
   end
 end
+
+
+class PetsController < ApplicationController
+  def
+
+  end
+end

@@ -1,0 +1,14 @@
+1. Build to scale from the start, when profits outweigh costs
+
+2. Keep assets in public/system to not make them disappear, from deploy to deploy
+
+3. Add indexes to all `_id` columns (before rails 5. In Rails 5 its made by default). Moreover:
+  1. index columns that must have unique value per row
+  2. index `type` column in STI models
+  3. columns used in `where` clauses, that:
+    contain only few string values
+    partial index on boolean columns, on small number of values, i.e. 100000 true's and 1000 false's in column, so put index on false's
+    on datetime columns, of its values are used in sorting
+
+  NOTE: indexes slows down INSERT command. Add them only where they are needed
+
