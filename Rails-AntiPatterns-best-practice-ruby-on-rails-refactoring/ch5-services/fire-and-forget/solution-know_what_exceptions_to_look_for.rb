@@ -39,7 +39,7 @@ HTTP_ERRORS = [
 
 begin
   # make request
-rescue => e
+rescue *HTTP_ERRORS => e
   HoptoadNotifier.notify(e)
 end
 

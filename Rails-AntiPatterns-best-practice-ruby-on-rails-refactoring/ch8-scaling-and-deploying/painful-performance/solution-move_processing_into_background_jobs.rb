@@ -50,3 +50,6 @@ end
 def create
   Sale.send_later(:generate_report, current_user)
 end
+
+
+# For more complex job logic, choose job classes
