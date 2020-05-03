@@ -1,0 +1,4 @@
+Never modify the `up` migration, unless there is an irreversible bug in it, and it wasnt run in production
+Alwys be sure that migration is passing with success. To ensure it will you can run:
+rake db:migrate
+rake db:migrate:redo # will run `down` and `up` again
