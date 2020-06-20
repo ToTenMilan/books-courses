@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5)), url(images/bg.jpg) no-repeat center;
+}
+
+.card-wrapper {
+  height: 600px;
+  width: 450px;
+  /* border: 1px solid #fff; */
+  position: absolute;
+
+  /* counter vertically and horizontally */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* separate bg for wrapper */
+  background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5)), url(images/bg.jpg) no-repeat center;
+
+  border-radius: 5px;
+
+  /* card is moved above by .card `position` and `top`
+  hide the card to move it down */
+  overflow: hidden;
+  
+  transition: box-shadow 1s;
+}
+
+.card-wrapper:hover {
+  box-shadow: 0 0 30px #fff;
+}
+
+.card {
+  /* place above top border to move down */
+  position: absolute;
+  top: -100%;
+  
+  height: 100%;
+  width: 100%;
+
+  /* 190deg tilts the gradent line */
+  /* 50%-0 divide the grdient */
+  background: linear-gradient(190deg, rgba(21, 190, 30, .8) 50%, rgba(233, 67, 67, .8) 0);
+  border-radius: inherit;
+  
+  /* flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-wrapper:hover .card {
+  /* # show card on hover */
+  top: 0;
+
+  /* without transition it shows ugly */
+  transition: top .3s 1.5s;
+}
+
+.card-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  /* fit image in natural shape, instead of stretching it */
+  object-fit: cover;
+  
+  margin-top: 15px;
+  border: 2px solid #fff;
+  padding: 10px;
+
+  box-shadow: 0 0 50px rgba(0,0,0, .5);
+}
+
+.card-heading {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 3px;
+  background: linear-gradient(#0a9751, #06831b);
+  text-align: center;
+  padding: 5px 0;
+  transform: perspective(1000px) skewX(-20deg) rotateY(40deg);
+}
+
+.card-paragraph {
+  font-size: 18px;
+  color: #ddd;
+  width: 85%;
+  text-align: justify;
+  position: relative;
+}
+
+/* move first letter to the right */
+.card-paragraph::first-letter {
+  margin-left: 40px;
+}
+
+.card-paragraph i {
+  color: #fff;
+  font-size: 25px;
+  font-style: italic;
+  position: absolute;
+}
+
+/* position qoute left according little higher */
+.card-paragraph i:first-child {
+  top: -10%;
+}
+
+/* position qoute right little lower and to right from text */
+.card-paragraph i:last-child {
+  bottom: -10%;
+  margin-left: 10px;
+}
+
+.card-icons {
+  /* no ugly default bullets */
+  list-style: none;
+
+  /* flexbox for icons */
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.card-icon-link {
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ffffff;
+
+  /* make links like buttons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.card-icon-link:hover {
+  border: 1px solid #1b5cf5
+}
+
+/* font size and color are for icons !! */
+.card-icon {
+  font-size: 20px;
+  color: #fff;
+}
+
+.card-btn {
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 35px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  background: linear-gradient(#6837ee, #0d2b7e);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+  cursor: pointer;
+}
