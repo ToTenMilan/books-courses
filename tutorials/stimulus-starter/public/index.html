@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+  <script src="bundle.js" async></script>
+</head>
+<body>
+  <h1 data-controller="example"></h1>
+  
+  <!-- Example 1: console log user input -->
+  <div data-controller="hello">
+    <input data-target="hello.name" type="text"> <!-- `hello.name` is "target descriptor" -->
+<!--<input data-target="controller.target_name" type="text">-->
+    
+    <button data-action="click->hello#greet">Greet</button> <!--`click->hello#greet` is "action descriptor"-->
+<!--<button data-action="event->controller#method">Greet</button> -->
+  </div>
+
+  <!-- example 2: copy to clipboard -->
+  <div data-controller="clipboard">
+    PIN: <input data-target='clipboard.source' type="text" value="1234" readonly>
+    <button data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button> <!-- no `click->` because its default -->
+  </div>
+
+  <div data-controller="clipboard">
+    PIN: <input data-target='clipboard.source' type="text" value="3737" readonly>
+    <button data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button> <!-- no `click->` because its default -->
+  </div>
+
+  <div data-controller="clipboard">
+    PIN: <input data-target="clipboard.source" type="text" value="1111" readonly>
+    <a href='#' data-action='clipboard#copy' class="clipboard-button">Copy to clipboard</a>
+  </div>
+
+  <div data-controller="clipboard">
+    PIN: <textarea data-target="clipboard.source" type="text" readonly>2222</textarea>
+    <a href='#' data-action='clipboard#copy' class="clipboard-button">Copy to clipboard</a>
+  </div>
+
+  <div data-controller="slideshow" data-slideshow-index="1"> 
+    <button data-action='slideshow#previous'> <- </button>
+    <button data-action='slideshow#next'> -> </button>
+
+    <button data-target='slideshow.slide' class='slide'>S</button>
+    <button data-target='slideshow.slide' class='slide'>K</button>
+    <button data-target='slideshow.slide' class='slide'>A</button>
+    <button data-target='slideshow.slide' class='slide'>T</button>
+    <button data-target='slideshow.slide' class='slide'>E</button>
+  </div>
+
+  <div data-controller="content-loader"
+    data-content-loader-url="/messages.html"
+    data-content-loader-refresh-interval="5000"
+  >
+
+  </div>
+  
+</body>
+</html>
