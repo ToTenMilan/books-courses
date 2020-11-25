@@ -2,13 +2,13 @@
 
 #### Books
 
-###### ![In Progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Rails AntiPatterns: Best Practice Ruby on Rails refactoring | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Rails-AntiPatterns-best-practice-ruby-on-rails-refactoring) | [source](https://www.oreilly.com/library/view/railstm-antipatterns-best/9780321620293/)
+###### Rails AntiPatterns: Best Practice Ruby on Rails refactoring | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Rails-AntiPatterns-best-practice-ruby-on-rails-refactoring) | [source](https://www.oreilly.com/library/view/railstm-antipatterns-best/9780321620293/)
 
 ###### Effective Testing with RSpec 3 | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Effective-testing-with-RSpec3) | [source](https://www.oreilly.com/library/view/effective-testing-with/9781680502770/)
 
 ###### Practical Object Oriented Design in Ruby | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Practical-Object-Oriented-Design-with-Ruby) | [source](https://www.poodr.com/)
 
-###### ![In Progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Programowanie w języku Ruby - mikrousługi i konteneryzacja | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/ruby-mikrouslugi-konteneryzacja) | [source](https://helion.pl/ksiazki/programowanie-w-jezyku-ruby-mikrouslugi-i-konteneryzacja-michal-sobczak,prumik.htm)
+###### ![Halted](https://img.shields.io/badge/halted-%20-lightgrey) Programowanie w języku Ruby - mikrousługi i konteneryzacja | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/ruby-mikrouslugi-konteneryzacja) | [source](https://helion.pl/ksiazki/programowanie-w-jezyku-ruby-mikrouslugi-i-konteneryzacja-michal-sobczak,prumik.htm)
 
 ###### ![Halted](https://img.shields.io/badge/halted-%20-lightgrey) Component-Based Rails Applications: Large Domains under Control | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/component_based_rails_applications/sportsball) | [source](https://www.cbra.info/book/index.html)
 
@@ -116,7 +116,7 @@
 
 #### Books
 
-###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Kali Revealed | [source](https://www.kali.org/download-kali-linux-revealed-book/)
+###### ![Halted](https://img.shields.io/badge/halted-%20-lightgrey) Kali Revealed | [source](https://www.kali.org/download-kali-linux-revealed-book/)
 
 #### Courses
 
