@@ -1,0 +1,8 @@
+Exercise One: Reloading Rulers
+
+rebuild gem from /rulers:
+gem build rulers.gemspec
+gem install rulers-0.0.1.gem
+
+run server (from /rulers/best_quotes)
+rackup -p 3001
