@@ -2,6 +2,8 @@
 
 #### Books
 
+###### ![In progress]() Ruby performance optimization | [GitHub repo]() | [source](https://pragprog.com/titles/adrpo/ruby-performance-optimization/)
+
 ###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Rebuilding Rails | [GitHub repo]() | [source](https://rebuilding-rails.com/)
 
 ###### Rails AntiPatterns: Best Practice Ruby on Rails refactoring | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Rails-AntiPatterns-best-practice-ruby-on-rails-refactoring) | [source](https://www.oreilly.com/library/view/railstm-antipatterns-best/9780321620293/)
