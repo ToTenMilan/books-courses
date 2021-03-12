@@ -2,7 +2,7 @@
 
 #### Books
 
-###### ![In progress]() Ruby performance optimization | [GitHub repo]() | [source](https://pragprog.com/titles/adrpo/ruby-performance-optimization/)
+###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Ruby performance optimization | [GitHub repo]() | [source](https://pragprog.com/titles/adrpo/ruby-performance-optimization/)
 
 ###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Rebuilding Rails | [GitHub repo]() | [source](https://rebuilding-rails.com/)
 
