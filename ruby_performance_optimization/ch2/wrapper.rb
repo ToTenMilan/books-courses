@@ -10,7 +10,7 @@ require "json"
 require "benchmark"
 
 def measure(&block)
-  no_gc = (ARGV[0] == "--no-gc")
+  no_gc = (ARGV[0] == "--no-gc") || (ARGV[0] == '-n')
 
   if no_gc
     GC.disable
@@ -42,3 +42,4 @@ def measure(&block)
     }
   })
 end
+

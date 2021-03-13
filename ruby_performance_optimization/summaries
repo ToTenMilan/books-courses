@@ -1,0 +1,6 @@
+ch 1
+- line-by-line data processing and avoiding intermediate objects
+ch 2
+- Optimize memory by avoiding extra allocations and memory leaks.
+- Write faster iterators that take both less time and memory.
+- write less Ruby code by letting specialized tools do their job.
