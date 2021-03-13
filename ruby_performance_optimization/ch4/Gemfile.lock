@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ruby-prof (1.4.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ruby-prof
+
+BUNDLED WITH
+   2.1.4

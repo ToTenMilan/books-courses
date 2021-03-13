@@ -4,3 +4,12 @@ ch 2
 - Optimize memory by avoiding extra allocations and memory leaks.
 - Write faster iterators that take both less time and memory.
 - write less Ruby code by letting specialized tools do their job.
+ch 3
+- Optimize memory taken by ActiveRecord by aggressive preloading, selective attribute fetching, and data processing in batches.
+- Replace explicit iterators in views with render collection, which takes both less time and memory.
+- Let your database server do your data manipulation.
+ch 4
+- Use ruby-prof for profiling. Get better profile visualization with KCachegrind/QCachegrind.
+- Profiling is the only reliable way to understand what is slow in your application. Unfortunately it doesn’t tell you how to optimize.
+- Profiling and visualization tools are prone to double counting. You must carefully examine your profile to draw the right conclusions.
+- Remember little details that can make your profiles invalid. Turn off GC for CPU profiling.

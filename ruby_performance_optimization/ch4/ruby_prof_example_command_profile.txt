@@ -1,0 +1,32 @@
+Measure Mode: wall_time
+Thread ID: 1280
+Fiber ID: 1260
+Total: 0.002032
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name                           location
+ 44.59      0.001     0.001     0.000     0.000        2  *Kernel#require                 
+ 30.88      0.002     0.001     0.000     0.001        1   Kernel#load                    
+ 15.46      0.000     0.000     0.000     0.000        1   <Class::Date>#parse            
+  2.68      0.000     0.000     0.000     0.000      110   Module#method_added            
+  1.90      0.000     0.000     0.000     0.000        4   IO#set_encoding                
+  1.33      0.002     0.000     0.000     0.002        1   RubyProf::Cmd#run              /home/milan/.rvm/gems/ruby-2.7.1/gems/ruby-prof-1.4.3/bin/ruby-prof:291
+  1.10      0.000     0.000     0.000     0.000       48   BasicObject#singleton_method_added 
+
+* recursively called methods
+
+Columns are:
+
+  %self     - The percentage of time spent in this method, derived from self_time/total_time.
+  total     - The time spent in this method and its children.
+  self      - The time spent in this method.
+  wait      - The amount of time this method waited for other threads.
+  child     - The time spent in this method's children.
+  calls     - The number of times this method was called.
+  name      - The name of the method.
+  location  - The location of the method.
+
+The interpretation of method names is:
+
+  * MyObject#test - An instance method "test" of the class "MyObject"
+  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.
