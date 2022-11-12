@@ -52,6 +52,8 @@
 
 #### Books
 
+###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Eloquent javascript - 3rd edition | [GitHub repo]() | [source](https://eloquentjavascript.net/index.html)
+
 ###### Understanding ECMAScript 6: The Definitive Guide for JavaScript Developers | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/understanding-es6) | [source](https://www.amazon.com/Understanding-ECMAScript-Definitive-JavaScript-Developers/dp/1593277571)
 
 ###### Learning React: A Hands-On Guide to Building Web Applications Using React and Redux, Second edition | [source](https://learning.oreilly.com/library/view/learning-react-a/9780134843582/)
