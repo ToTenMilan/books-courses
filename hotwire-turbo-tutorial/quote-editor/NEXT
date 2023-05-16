@@ -1,0 +1,7 @@
+https://www.hotrails.dev/turbo-rails/css-ruby-on-rails
+
+Editing quotes with Turbo Frames
+
+bin/dev
+
+bin/rails test test/system/quotes_test.rb
