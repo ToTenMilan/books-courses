@@ -1,0 +1,6 @@
+<%
+=begin%>
+ <%= turbo_stream.remove "quote_#{@quote.id}" %>
+<%
+=end%>
+<%= turbo_stream.remove @quote %>
