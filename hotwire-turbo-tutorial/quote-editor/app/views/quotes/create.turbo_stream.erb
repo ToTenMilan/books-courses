@@ -1,0 +1,26 @@
+<!-- explicit 1 -->
+
+<%= turbo_stream.prepend "quotes", partial: 'quotes/quote', locals: { quote: @quote } %>
+
+
+<!-- explicit 2 -->
+<!--
+ <%= turbo_stream.prepend "quotes" do %>
+  <%= render partial: "quotes/quote", locals: { quote: @quote } %>
+<% end %>
+-->
+
+<!-- implicit 1 (shorthand of explicit 2) -->
+<!--
+<%= turbo_stream.prepend "quotes" do %>
+  <%= render @quote %>
+<% end %>
+-->
+
+<!-- implicit 2 (shorthand of implicit 1)> -->
+<!--
+<%= turbo_stream.prepend "quotes", @quote %>
+-->
+
+<!-- update the Turbo Frame with id new_quote with empty content. -->
+<%= turbo_stream.update Quote.new, '' %>
