@@ -8,5 +8,13 @@ class Quote < ApplicationRecord
     target: 'quotes'#, prepended to the DOM node with the id of "quotes" (ensure)
   }
 
+  # syntactic sugar
+  # details:
+  # https://www.hotrails.dev/turbo-rails/turbo-streams
+  # Turbo Streams conventions and syntactic sugar
+  # after_create_commit -> {
+  #   broadcast_prepend_to "quotes"
+  # }
+
   scope :ordered, -> { order(id: :desc) }
 end
