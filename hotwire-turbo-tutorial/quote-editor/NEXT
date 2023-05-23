@@ -1,6 +1,6 @@
 https://www.hotrails.dev/turbo-rails/css-ruby-on-rails
 
-Editing quotes with Turbo Frames
+When our user clicks on the "Cancel" link for the new quote form
 
 bin/dev
 

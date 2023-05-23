@@ -9,5 +9,19 @@
   <% end %>
 
   <%= f.input :name, input_html: { autofocus: true } %>
+  <!-- 'Cancel' works without adding any extra code because:
+
+  When our user clicks on the "Cancel" link for the new quote form:
+
+The link is within a Turbo Frame of id new_quote, so Turbo will only replace the content of this frame
+The link navigates to the Quotes#index page that contains an empty Turbo Frame with id new_quote
+Turbo replaces the content of the new_quote frame with the empty content, so the form disappears
+When our user clicks on the "Cancel" link for the edit quote form:
+
+The link is within a Turbo Frame of id dom_id(quote), so Turbo will only replace the content of this frame
+The link navigates to the Quotes#index page that contains a Turbo Frame with id dom_id(quote) that contains the HTML for this quote
+Turbo replaces the content of the dom_id(quote) Frame containing the form with the HTML for this quote
+  -->
+  <%= link_to 'Cancel', quotes_path, class: 'btn btn--target' %>
   <%= f.submit class: "btn btn--secondary" %>
 <% end %>
