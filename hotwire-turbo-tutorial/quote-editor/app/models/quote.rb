@@ -1,4 +1,6 @@
 class Quote < ApplicationRecord
+  belongs_to :company
+
   validates :name, presence: true
 
   # after_create_commit -> {
