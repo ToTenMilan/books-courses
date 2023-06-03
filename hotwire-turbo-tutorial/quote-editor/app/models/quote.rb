@@ -26,7 +26,8 @@ class Quote < ApplicationRecord
   #   broadcast_remove_to 'quotes'
   # }
 
-  broadcasts_to ->(quote) { 'quotes' }, inserts_by: :prepend
+  # [quote.company, 'quotes'] generates signed-stream-name which lets us stream only to the users who are part of company
+  broadcasts_to ->(quote) { [quote.company, 'quotes'] }, inserts_by: :prepend
 
   scope :ordered, -> { order(id: :desc) }
 end
