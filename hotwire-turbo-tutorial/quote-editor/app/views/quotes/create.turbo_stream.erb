@@ -5,7 +5,7 @@
 
 <!-- explicit 2 -->
 <!--
- <%= turbo_stream.prepend "quotes" do %>
+<%= turbo_stream.prepend "quotes" do %>
   <%= render partial: "quotes/quote", locals: { quote: @quote } %>
 <% end %>
 -->
@@ -24,3 +24,6 @@
 
 <!-- update the Turbo Frame with id new_quote with empty content. -->
 <%= turbo_stream.update Quote.new, '' %>
+
+<!-- prepend flash messages -->
+<%= turbo_stream.prepend 'flash', partial: 'layouts/flash' %>
