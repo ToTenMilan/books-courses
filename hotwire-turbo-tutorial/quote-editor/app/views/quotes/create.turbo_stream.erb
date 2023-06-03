@@ -26,4 +26,4 @@
 <%= turbo_stream.update Quote.new, '' %>
 
 <!-- prepend flash messages -->
-<%= turbo_stream.prepend 'flash', partial: 'layouts/flash' %>
+<%= render_turbo_stream_flash_message %>
