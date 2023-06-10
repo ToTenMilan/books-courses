@@ -2,11 +2,7 @@
                     html: {
                       class: "quote form",
                     } do |f| %>
-  <% if quote.errors.any? %>
-    <div class="error-message">
-      <%= quote.errors.full_messages.to_sentence.capitalize %>
-    </div>
-  <% end %>
+  <%= form_error_notification(quote) %>
 
   <%= f.input :name, input_html: { autofocus: true } %>
   <!-- 'Cancel' works without adding any extra code because:
