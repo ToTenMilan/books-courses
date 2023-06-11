@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def render_turbo_stream_flash_message
-    turbo_stream.prepend 'flash', partial: 'layouts/flash'
+  def render_turbo_stream_flash_messages
+    turbo_stream.prepend "flash", partial: "layouts/flash"
   end
 
   def form_error_notification(object)

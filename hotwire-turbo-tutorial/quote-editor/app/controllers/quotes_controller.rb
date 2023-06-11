@@ -22,7 +22,8 @@ class QuotesController < ApplicationController
         format.turbo_stream { flash.now[:notice] = "Quote was successfully created." }
       end
     else
-      render :new
+      # responses to invalid form submission should have the unprocessable_entity
+      render :new # check later whether unprocessable_entity is not needed?
     end
   end
 
@@ -36,6 +37,7 @@ class QuotesController < ApplicationController
         format.turbo_stream { flash.now[:notice] = "Quote was successfully updated." }
       end
     else
+      # responses to invalid form submission should have the unprocessable_entity
       render :edit, status: :unprocessable_entity
     end
   end
