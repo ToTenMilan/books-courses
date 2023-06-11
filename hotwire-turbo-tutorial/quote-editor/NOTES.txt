@@ -1,0 +1,9 @@
+NOTES:
+
+
+Error:
+Error: The response (200) did not contain the expected <turbo-frame id="line_item_date_869574343"> and will be ignored. To perform a full page visit instead, set turbo-visit-control to reload.
+solution:
+This is because our "Add item" link is already nested within a Turbo Frame we added in the previous chapter as described in the sketch below:
+To prevent Turbo from intercepting our clicks on links and form submissions, we will use the data-turbo-frame="_top"
+-- Possible solution for dietary app --
