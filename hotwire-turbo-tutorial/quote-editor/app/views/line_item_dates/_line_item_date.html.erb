@@ -1,50 +1,55 @@
 <%= turbo_frame_tag line_item_date do %>
   <div class="line-item-date">
-    <div class="line-item-date">
-      <div class="line-item-date__header">
-        <h2 class="line-item-date__title">
-          <%= l(line_item_date.date, format: :long) %>
-        </h2>
+    <div class="line-item-date__header">
+      <h2 class="line-item-date__title">
+        <%= l(line_item_date.date, format: :long) %>
+      </h2>
 
-        <div class="line-item-date__actions">
-          <%= button_to "Delete",
-                        quote_line_item_date_path(quote, line_item_date),
-                        method: :delete,
-                        form: { data: { turbo_confirm: "Are you sure?" } },
-                        class: "btn btn--light" %>
-          <%= link_to "Edit",
-                      [:edit, quote, line_item_date],
+      <div class="line-item-date__actions">
+        <%= button_to "Delete",
+                      quote_line_item_date_path(quote, line_item_date),
+                      method: :delete,
+                      form: { data: { turbo_confirm: "Are you sure?" } },
                       class: "btn btn--light" %>
+        <%= link_to "Edit",
+                    [:edit, quote, line_item_date],
+                    class: "btn btn--light" %>
 
-          <!--
-            Reminder on polymorphic routes
-            Example of two equivalent buttons:
-            <%= button_to "Delete", [quote, line_item_date] %>
-            <%= button_to "Delete", quote_line_item_date_path(quote, line_item_date) %>
+        <!--
+          Reminder on polymorphic routes
+          Example of two equivalent buttons:
+          <%= button_to "Delete", [quote, line_item_date] %>
+          <%= button_to "Delete", quote_line_item_date_path(quote, line_item_date) %>
 
-            or in controllers
-            redirect_to @quote
-            redirect_to quote_path(@quote)
-          -->
-        </div>
+          or in controllers
+          redirect_to @quote
+          redirect_to quote_path(@quote)
+        -->
+      </div>
+    </div>
+
+    <div class="line-item-date__body">
+      <div class="line-item line-item--header">
+        <div class="line-item__name">Article</div>
+        <div class="line-item__quantity">Quantity</div>
+        <div class="line-item__price">Price</div>
+        <div class="line-item__actions"></div>
       </div>
 
-      <div class="line-item-date__body">
-        <div class="line-item line-item--header">
-          <div class="line-item__name">Article</div>
-          <div class="line-item__quantity">Quantity</div>
-          <div class="line-item__price">Price</div>
-          <div class="line-item__actions"></div>
-        </div>
+      <%= render line_item_date.line_items, quote: quote, line_item_date: line_item_date %>
 
-        <%= render line_item_date.line_items, quote: quote, line_item_date: line_item_date %>
+      <!-- for nested resources -->
+      <!-- dom_id(id, prefix) -->
+      <!-- but this approach is harder to read and has edgecases. instead use helper method nested_dom_id -->
+      <!-- <%= turbo_frame_tag dom_id(LineItem.new, dom_id(line_item_date)) %> -->
 
-        <div class="line-item-date__footer">
-          <%= link_to "Add item",
-                      [:new, quote, line_item_date, :line_item],
-                      data: { turbo_frame: "_top" },
-                      class: "btn btn--primary" %>
-        </div>
+      <%= turbo_frame_tag nested_dom_id(line_item_date, LineItem.new) %>
+
+      <div class="line-item-date__footer">
+        <%= link_to "Add item",
+                    [:new, quote, line_item_date, :line_item],
+                    data: { turbo_frame: "_top" },
+                    class: "btn btn--primary" %>
       </div>
     </div>
   </div>
