@@ -36,8 +36,9 @@
         <div class="line-item__actions"></div>
       </div>
 
-      <%= render line_item_date.line_items, quote: quote, line_item_date: line_item_date %>
-
+      <%= turbo_frame_tag nested_dom_id(line_item_date, "line_items") do %>
+        <%= render line_item_date.line_items, quote: quote, line_item_date: line_item_date %>
+      <% end %>
       <!-- for nested resources -->
       <!-- dom_id(id, prefix) -->
       <!-- but this approach is harder to read and has edgecases. instead use helper method nested_dom_id -->
@@ -45,10 +46,12 @@
 
       <%= turbo_frame_tag nested_dom_id(line_item_date, LineItem.new) %>
 
+
       <div class="line-item-date__footer">
         <%= link_to "Add item",
                     [:new, quote, line_item_date, :line_item],
-                    data: { turbo_frame: "_top" },
+                    data: { turbo_frame: nested_dom_id(line_item_date, LineItem.new) },
+                    # data: { turbo_frame: '_top' },
                     class: "btn btn--primary" %>
       </div>
     </div>
