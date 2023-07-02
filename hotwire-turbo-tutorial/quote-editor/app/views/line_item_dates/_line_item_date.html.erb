@@ -59,3 +59,15 @@
     </div>
   </div>
 <% end %>
+
+
+<%
+=begin%>
+ Putting few line item dates in the edited state (opened edit form),
+and editing the `line_item_date` will close all the edit forms after clicking 'update'
+
+Two solutions to this
+- Don't reorder the items when using the Turbo Stream format
+- Reorder items in the front-end with a Stimulus controller
+<%
+=end%>
