@@ -12,7 +12,6 @@ class LineItemsController < ApplicationController
 
     if @line_item.save
       respond_to do |format|
-        # binding.pry
         format.html { redirect_to quote_path(@quote), notice: "Item was successfully created." }
         format.turbo_stream { flash.now[:notice] = "Item was successfully created." }
       end
