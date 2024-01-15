@@ -2,15 +2,10 @@
 require_relative 'fixnum_extensions'
 
 class FizzBuzz
-  # def sequence
-  #   numbers.collect do |n|
-  #     fbe = FizzBuzzEngine.new(n)
-  #     fbe.value
-  #   end
-  # end
-
   using FixnumExtensions
-
+  def initialize(output = $stdout)
+    @output = output
+  end
 
   def transform(n)
     sequence[n-1]
@@ -18,20 +13,8 @@ class FizzBuzz
 
   def output(n)
     result = transform(n)
-    print result
+    @output.write result
   end
-
-  # def transform(number)
-  #   pairs = {}
-  #   (1..100).each do |n|
-  #     pairs[n] = n
-  #   end
-  #   result = {}
-  #   pairs.keys.each do |key|
-  #     result[key] = key.fizz_buzz
-  #   end
-  #   result[number]
-  # end
 
   private
 
