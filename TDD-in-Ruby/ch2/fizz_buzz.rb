@@ -3,12 +3,17 @@ require_relative 'fixnum_extensions'
 
 class FizzBuzz
   using FixnumExtensions
-  def initialize(output = $stdout)
+  def initialize(output = $stdout, clock)
     @output = output
+    @clock = clock
   end
 
   def transform(n)
-    sequence[n-1]
+    result = sequence[n-1]
+    if @clock && @clock.morning?
+      result = "#{result} Morning"
+    end
+    result
   end
 
   def output(n)
