@@ -2,10 +2,12 @@ require 'minitest/autorun'
 require_relative 'fizz_buzz'
 
 class TestFizzBuzz < Minitest::Test
-  def test_generate_fizz_buzz_for_multiples_of_3
+  def test_print_fizz_buzz_for_multiples_of_3
     fb = FizzBuzz.new
-    result = fb.transform(3)
-    assert_equal('Fizz', result)
+    # result = fb.transform(3)
+    # assert_equal('Fizz', result)
+
+    assert_output('Fizz') { fb.output(3) }
   end
 
   def test_generate_fizz_buzz_for_multiples_of_5

@@ -16,6 +16,11 @@ class FizzBuzz
     sequence[n-1]
   end
 
+  def output(n)
+    result = transform(n)
+    print result
+  end
+
   # def transform(number)
   #   pairs = {}
   #   (1..100).each do |n|
