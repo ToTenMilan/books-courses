@@ -16,6 +16,10 @@ class FizzBuzz
     @output.write result
   end
 
+  def random
+    numbers.sample
+  end
+
   private
 
   def sequence
