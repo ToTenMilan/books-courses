@@ -18,7 +18,7 @@ class FizzBuzz
 
   def output(n)
     result = transform(n)
-    @output.write result
+    @output.write(result)
   end
 
   def random
