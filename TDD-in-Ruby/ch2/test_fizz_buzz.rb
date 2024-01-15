@@ -2,27 +2,27 @@ require 'minitest/autorun'
 require_relative 'fizz_buzz'
 
 class TestFizzBuzz < Minitest::Test
-  def test_generate_numbers_from_1_to_100
-    fb = FizzBuzz.new
-    result = fb.numbers
-    assert_equal((1..100).to_a, result)
-  end
-
   def test_generate_fizz_buzz_for_multiples_of_3
     fb = FizzBuzz.new
-    result = fb.sequence
-    assert_equal('Fizz', result[2])
+    result = fb.transform(3)
+    assert_equal('Fizz', result)
   end
 
   def test_generate_fizz_buzz_for_multiples_of_5
     fb = FizzBuzz.new
-    result = fb.sequence
-    assert_equal('Buzz', result[4])
+    result = fb.transform(5)
+    assert_equal('Buzz', result)
   end
 
-  def test_generate_fizz_buzz_for_multiples_of_3_and_5
+  def test_generate_fizz_buzz_for_multiples_of_15
     fb = FizzBuzz.new
-    result = fb.sequence
-    assert_equal('FizzBuzz', result[14])
+    result = fb.transform(15)
+    assert_equal('FizzBuzz', result)
+  end
+
+  def test_generate_number_is_not_multiple
+    fb = FizzBuzz.new
+    result = fb.transform(1)
+    assert_equal(1, result)
   end
 end
