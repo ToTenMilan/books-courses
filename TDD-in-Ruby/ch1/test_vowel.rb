@@ -6,7 +6,7 @@ class String
   end
 end
 
-module MiniTest::Assertions
+module Minitest::Assertions
   def assert_vowel(letter)
     assert(%(a e i o u).include?(letter), "Expected #{letter} to be a vowel")
   end
