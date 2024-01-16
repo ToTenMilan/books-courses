@@ -14,4 +14,8 @@ class Stack
   def pop
     @elements.pop
   end
+
+  def top
+    @elements.last
+  end
 end
