@@ -12,10 +12,17 @@ class Stack
   end
 
   def pop
+    if empty?
+      raise 'Cannot pop an empty stack'
+    end
     @elements.pop
   end
 
   def top
     @elements.last
+  end
+
+  def empty?
+    @elements.empty?
   end
 end
