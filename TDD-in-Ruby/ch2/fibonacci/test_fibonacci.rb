@@ -22,6 +22,11 @@ class TestFibonacci < Minitest::Test
     assert_equal(2, result)
   end
 
+  def test_fibonacci_of_five_is_five
+    result = Fibonacci.of(5)
+    assert_equal(5, result)
+  end
+
   def test_fibonacci_of_ten_is_fifty_five
     result = Fibonacci.of(10)
     assert_equal(55, result)
