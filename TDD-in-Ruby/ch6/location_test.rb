@@ -30,54 +30,20 @@ describe Location do
     assert_equal [-1, 0], Location::WEST
   end
 
-  it 'location for 0, 1 is north' do
-    location = Location.for(0, 1)
 
-    assert_equal Location::NORTH, location
+
+  it 'adding two locations returns a new location' do
+    result = Location.add(Location::SOUTH, Location::CENTER)
+
+    assert_equal Location::SOUTH, result
   end
 
-  it 'location for -1, 1 is north west' do
-    location = Location.for(-1, 1)
-    assert_equal Location::NORTHWEST, location
-  end
+  it 'returns a list of offsets for any cell' do
+    offsets = Location::OFFSETS
+    expected = [Location::NORTHWEST, Location::NORTHEAST,
+      Location::SOUTHWEST, Location::SOUTHEAST, Location::NORTH,
+      Location::SOUTH, Location::EAST, Location::WEST]
 
-  it 'location for 1, 1 is north east' do
-    location = Location.for(1, 1)
-    assert_equal Location::NORTHEAST, location
-  end
-
-  it 'location for -1, -1 is south west' do
-    location = Location.for(-1, -1)
-    assert_equal Location::SOUTHWEST, location
-  end
-
-  it 'location for 1, 1 is south east' do
-    location = Location.for(1, -1)
-    assert_equal Location::SOUTHEAST, location
-  end
-
-  it 'location for 0, 1 is north' do
-    location = Location.for(0, 1)
-    assert_equal Location::NORTH, location
-  end
-
-  it 'location for 0, -1 is south' do
-    location = Location.for(0, -1)
-    assert_equal Location::SOUTH, location
-  end
-
-  it 'location for 1, 0 is south' do
-    location = Location.for(1, 0)
-    assert_equal Location::EAST, location
-  end
-
-  it 'location for -1, 0 is south' do
-    location = Location.for(-1, 0)
-    assert_equal Location::WEST, location
-  end
-
-  it 'location for 0, 0 is center' do
-    location = Location.for(0, 0)
-    assert_equal Location::CENTER, location
+    assert_equal expected, offsets
   end
 end

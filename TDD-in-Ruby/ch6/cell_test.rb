@@ -15,10 +15,26 @@ describe Cell do
     refute cell.alive?
   end
 
-  it 'has a location' do
-    cell = Cell.new(Location::NORTH)
-    result = cell.location
+  it 'dead cell can be born again' do
+    cell = Cell.new(Location::CENTER)
+    cell.die
 
-    assert_equal Location::NORTH, result
+    cell.born
+
+    assert cell.alive?
+  end
+
+  it 'returns true if a cell is located in the specified location' do
+    cell = Cell.new(Location::CENTER)
+    result = cell.at?(Location::CENTER)
+
+    assert result
+  end
+
+  it 'returns false if a cell is not located in the specified location' do
+    cell = Cell.new(Location::CENTER)
+    result = cell.at?(Location::NORTH)
+
+    refute result
   end
 end
