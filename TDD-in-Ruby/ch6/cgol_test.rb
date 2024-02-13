@@ -57,127 +57,19 @@ class NeighborHood
   def find_cell(location)
     @grid.detect {|c| c.location == location}
   end
+end
 
-  def count_center_cell
-    count_cell(find_cell(Location::CENTER))
-  end
+nh = NeighborHood.new
+nh.seed([
+  Cell.new(Location::CENTER),
+  Cell.new(Location::NORTH),
+  Cell.new(Location::NORTHWEST),
+  Cell.new(Location::SOUTHEAST)
+])
 
-  def count_north_cell
-    count_cell(find_cell(Location::NORTH))
-  end
-
-  def count_south_cell
-    count_cell(find_cell(Location::SOUTH))
-  end
-
-  def count_east_cell
-    count_cell(find_cell(Location::EAST))
-  end
-
-  def count_west_cell
-    count_cell(find_cell(Location::WEST))
-  end
-
-  def count_northwest_cell
-    count_cell(find_cell(Location::NORTHWEST))
-  end
-
-  def count_southwest_cell
-    count_cell(find_cell(Location::SOUTHWEST))
-  end
-
-  def count_northeast_cell
-    count_cell(find_cell(Location::NORTHEAST))
-  end
-
-  def count_southeast_cell
-    count_cell(find_cell(Location::SOUTHEAST))
-  end
-
-  def calculate_neighbors_for_center_cell
-    size = 0
-    size += count_north_cell
-    size += count_south_cell
-    size += count_east_cell
-    size += count_west_cell
-    size += count_northwest_cell
-    size += count_northeast_cell
-    size += count_southwest_cell
-    size += count_southeast_cell
-    size
-  end
-
-  def calculate_neighbors_for_northwest_cell
-    size = 0
-    size += count_north_cell
-    size += count_west_cell
-    size += count_center_cell
-    size
-  end
-
-  def calculate_neighbors_for_northeast_cell
-    size = 0
-    size += count_north_cell
-    size += count_east_cell
-    size += count_center_cell
-    size
-  end
-
-  def calculate_neighbors_for_southwest_cell
-    size = 0
-    size += count_south_cell
-    size += count_west_cell
-    size += count_center_cell
-    size
-  end
-
-  def calculate_neighbors_for_southeast_cell
-    size  = 0
-    size += count_south_cell
-    size += count_east_cell
-    size += count_center_cell
-    size
-  end
-
-  def calculate_neighbors_for_north_cell
-    size = 0
-    size += count_northwest_cell
-    size += count_center_cell
-    size += count_northeast_cell
-    size += count_west_cell
-    size += count_east_cell
-    size
-  end
-
-  def calculate_neighbors_for_south_cell
-    size = 0
-    size += count_southwest_cell
-    size += count_center_cell
-    size += count_southeast_cell
-    size += count_west_cell
-    size += count_east_cell
-    size
-  end
-
-  def calculate_neighbors_for_east_cell
-    size = 0
-    size += count_northeast_cell
-    size += count_center_cell
-    size += count_southeast_cell
-    size += count_north_cell
-    size += count_south_cell
-    size
-  end
-
-  def calculate_neighbors_for_west_cell
-    size = 0
-    size += count_northwest_cell
-    size += count_center_cell
-    size += count_southwest_cell
-    size += count_north_cell
-    size += count_south_cell
-    size
-  end
+10.times do
+  nh.tick
+  p nh
 end
 
 describe NeighborHood do
@@ -331,5 +223,12 @@ describe NeighborHood do
     assert c1.alive?
   end
 
+  it 'check if a cell is dead when the number of neighbors is counted' do
+    # c1 = Cell.new(Location::CENTER)
+    # c1.die
+    # neighborhood = NeighborHood.new
+    # neighborhood.seed([c1])
 
+    # assert_equal 0, neighborhood.number_of_neighbors_for(c1)
+  end
 end
