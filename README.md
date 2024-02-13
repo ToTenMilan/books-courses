@@ -2,7 +2,7 @@
 
 #### Books
 
-###### ![In progress]((https://img.shields.io/badge/in%20progress%20-%20-green.svg)) Test Driven Development in Ruby: A Practical Introduction to TDD Using Problem and Solution Domain Analysis | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/TDD-in-Ruby) | [source](https://learning.oreilly.com/library/view/test-driven-development/9781484226384/)
+###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Test Driven Development in Ruby: A Practical Introduction to TDD Using Problem and Solution Domain Analysis | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/TDD-in-Ruby) | [source](https://learning.oreilly.com/library/view/test-driven-development/9781484226384/)
 
 ###### ![In progress](https://img.shields.io/badge/in%20progress%20-%20-green.svg) Ruby performance optimization | [GitHub repo]() | [source](https://pragprog.com/titles/adrpo/ruby-performance-optimization/)
 
