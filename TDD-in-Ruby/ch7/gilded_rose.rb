@@ -4,6 +4,14 @@ require_relative 'backstage_pass.rb'
 require_relative 'conjured_item.rb'
 require_relative 'regular_item.rb'
 
+# Sequence | Refactoring                    | Purpose
+# 1        | Syntax Noise                   | Readability
+# 2        | Negative Conditionals          | Form
+# 3        | Hardcoded Strings and Integers | Readability
+# 4        | Localizing Logic               | Structure
+# 5        | Design Changes                 | Design
+# 6        | Express Intent                 | Readability
+
 class GildedRose
   SULFURAS = "Sulfuras, Hand of Ragnaros"
   BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert"
