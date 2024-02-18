@@ -10,4 +10,9 @@ class Subscription
     customer = Stripe::Customer.retrieve(customer_id)
     customer.update_subscription(plan: plan_id)
   end
+
+  def self.cancel(customer_id)
+    customer = Stripe::Customer.retrieve(customer_id)
+    customer.cancel_subscription
+  end
 end

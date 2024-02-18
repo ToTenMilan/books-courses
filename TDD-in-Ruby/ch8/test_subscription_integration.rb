@@ -36,4 +36,19 @@ describe Subscription do
 
     assert_equal new_plan_id, subscription.plan.id
   end
+
+  it 'can cancel subscription for a subscriber' do
+  email = 'daffy@rubyplus.com'
+  stripe_token = Stripe::Token.create(card: {
+                                        number: "4242424242424242",
+                                        exp_month:  7,
+                                        exp_year:  2020,
+                                        cvc: "314"})
+  plan_id = 'gold'
+  customer = Subscription.create(email, stripe_token.id, plan_id)
+
+  subscription = Subscription.cancel(customer.id)
+
+  assert_equal 'canceled', subscription.status
+end
 end
