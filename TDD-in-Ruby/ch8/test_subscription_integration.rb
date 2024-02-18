@@ -23,4 +23,17 @@ describe Subscription do
     # If there is no exception and the response JSON has the new customer ID then the test passes
     assert customer.id.size > 5
   end
+
+  it 'update subscription to a new plan' do
+    # Make sure that you have created a silver plan by using either the Stripe dashboard
+    # or the IRB console as shown in the section “Create a Plan.”
+
+    # This must be an existing customer id who already has a subscription for gold plan
+    customer_id = 'cus_9hIOOYk3q1dnBe'
+    new_plan_id = 'silver'
+
+    subscription = Subscription.update(customer_id, new_plan_id)
+
+    assert_equal new_plan_id, subscription.plan.id
+  end
 end

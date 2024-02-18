@@ -5,4 +5,9 @@ class Subscription
                             card:        stripe_token,
                             plan:        plan_id)
   end
+
+  def self.update(customer_id, plan_id)
+    customer = Stripe::Customer.retrieve(customer_id)
+    customer.update_subscription(plan: plan_id)
+  end
 end
