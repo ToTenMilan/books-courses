@@ -25,4 +25,24 @@ describe Subscription do
       assert_equal 'gold', customer.subscriptions.data[0].plan.id
     end
   end
+
+  it 'update subscription will update an existing subscribed plan' do
+    existing_customer_id = 'cus_6XToBT4GczhYXA'
+    new_plan_id = 'silver'
+
+    hash = JSON.parse(File.read("fixtures/customer.json"))
+    customer = Stripe::Customer.construct_from(hash)
+
+    subscription_hash = JSON.parse(File.read("fixtures/subscription.json"))
+    subscription = Stripe::Subscription.construct_from(subscription_hash)
+
+    Stripe::Customer.stub :retrieve, customer do
+      customer.stub :update_subscription, subscription do
+        result_subscription = Subscription.update(existing_customer_id, new_plan_id)
+
+        assert_equal 'silver', result_subscription.plan.id
+        assert_equal 'active', result_subscription.status
+      end
+    end
+  end
 end
