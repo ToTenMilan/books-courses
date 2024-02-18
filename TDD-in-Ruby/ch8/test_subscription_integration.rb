@@ -7,6 +7,15 @@ describe Subscription do
     Stripe.api_key = ENV['STRIPE_SECRET_KEY']
   end
 
+  it 'raises SocketError when there is no Internet connectivity' do
+    raises_exception = ->(a, b){ raise SocketError.new }
+    Net::HTTP.stub :get, raises_exception do
+      assert_raises SocketError do
+        Subscription.cancel('bogus customer id')
+      end
+    end
+  end
+
   it 'subscribe a customer to gold plan' do
     email = 'bugs_bunny@rubyplus.com'
     stripe_token = Stripe::Token.create(card: {
@@ -38,17 +47,17 @@ describe Subscription do
   end
 
   it 'can cancel subscription for a subscriber' do
-  email = 'daffy@rubyplus.com'
-  stripe_token = Stripe::Token.create(card: {
-                                        number: "4242424242424242",
-                                        exp_month:  7,
-                                        exp_year:  2020,
-                                        cvc: "314"})
-  plan_id = 'gold'
-  customer = Subscription.create(email, stripe_token.id, plan_id)
+    email = 'daffy@rubyplus.com'
+    stripe_token = Stripe::Token.create(card: {
+                                          number: "4242424242424242",
+                                          exp_month:  7,
+                                          exp_year:  2020,
+                                          cvc: "314"})
+    plan_id = 'gold'
+    customer = Subscription.create(email, stripe_token.id, plan_id)
 
-  subscription = Subscription.cancel(customer.id)
+    subscription = Subscription.cancel(customer.id)
 
-  assert_equal 'canceled', subscription.status
-end
+    assert_equal 'canceled', subscription.status
+  end
 end

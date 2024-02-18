@@ -15,4 +15,14 @@ class Subscription
     customer = Stripe::Customer.retrieve(customer_id)
     customer.cancel_subscription
   end
+
+  def self.check_internet_connectivity
+    require 'net/http'
+    begin
+      Net::HTTP.get('example.com', '/index.html')
+    rescue SocketError => se
+      message = "Problem with Internet connection. Check your Internet and try again"
+      raise se, message
+    end
+  end
 end
