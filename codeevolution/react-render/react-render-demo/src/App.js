@@ -5,6 +5,7 @@ import { ObjectUseState } from './components/ImmutableState/ObjectUseState';
 import { ChildOne } from './components/Optimization/ChildOne';
 import { GrandParent } from './components/Optimization/GrandParent';
 import { ParentOne } from './components/Optimization/ParentOne';
+import { ParentTwo } from './components/Optimization/ParentTwo';
 import { Parent } from './components/ParentChild/Parent';
 // import { UseState } from './components/UseState/UseState';
 import { UseReducer } from './components/UseReducer/UseReducer';
@@ -20,7 +21,8 @@ function App() {
       {/* <ParentOne>
         <ChildOne />
       </ParentOne> */}
-      <GrandParent />
+      {/* <GrandParent /> */}
+      <ParentTwo />
     </div>
   );
 }
