@@ -2,6 +2,7 @@
 import './App.css';
 import { ArrayUseState } from './components/ImmutableState/ArrayUseState';
 import { ObjectUseState } from './components/ImmutableState/ObjectUseState';
+import { ParentThree } from './components/IncorrectOptimization/ParentThree';
 import { ChildOne } from './components/Optimization/ChildOne';
 import { GrandParent } from './components/Optimization/GrandParent';
 import { ParentOne } from './components/Optimization/ParentOne';
@@ -22,7 +23,8 @@ function App() {
         <ChildOne />
       </ParentOne> */}
       {/* <GrandParent /> */}
-      <ParentTwo />
+      {/* <ParentTwo /> */}
+      <ParentThree />
     </div>
   );
 }
