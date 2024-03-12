@@ -582,8 +582,16 @@ video {
   height: 2rem;
 }
 
+.h-32{
+  height: 8rem;
+}
+
 .w-6{
   width: 1.5rem;
+}
+
+.w-full{
+  width: 100%;
 }
 
 .items-end{
@@ -657,6 +665,11 @@ video {
 .bg-gray-300{
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-4{
@@ -747,6 +760,10 @@ video {
 }
 
 @media (min-width: 640px){
+  .sm\:h-48{
+    height: 12rem;
+  }
+
   .sm\:text-red-500{
     --tw-text-opacity: 1;
     color: rgb(239 68 68 / var(--tw-text-opacity));
