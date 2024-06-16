@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.3"
+ruby "3.2.4"
 
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 gem "sprockets-rails"
@@ -39,9 +39,18 @@ gem "faker"
 # This is used to run the dev environment
 gem "foreman"
 
+# Sidekiq is used for running background jobs​
+# gem "sidekiq"
+
 # Prevents our workers from running too long if a request
 # doesn't return in time.
 gem "rack-timeout"
+
+group :development, :test do
+  gem 'byebug'
+  gem 'pry'
+  gem 'pry-byebug'
+end
 
 group :test do
   gem "capybara"
