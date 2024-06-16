@@ -40,7 +40,7 @@ gem "faker"
 gem "foreman"
 
 # Sidekiq is used for running background jobs​
-# gem "sidekiq"
+gem "sidekiq"
 
 # Prevents our workers from running too long if a request
 # doesn't return in time.
