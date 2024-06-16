@@ -2,10 +2,10 @@ ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
 require "minitest/autorun"
-# require 'sidekiq/testing'
+require 'sidekiq/testing'
 require "minitest/mock"
 require "factory_bot"
-# Sidekiq::Testing.fake!
+Sidekiq::Testing.fake!
 
 class ActiveSupport::TestCase
   include FactoryBot::Syntax::Methods
@@ -18,7 +18,7 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
   setup do
     Rails.cache.clear
-    # Sidekiq::Job.clear_all
+    Sidekiq::Job.clear_all
   end
 
 

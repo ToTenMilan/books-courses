@@ -26,8 +26,8 @@ class CreateOrdersTest < ApplicationSystemTestCase
     fill_in "order[quantity]", with: 2
 
     click_on "Place Order" # place paid order
-    # Sidekiq::Job.drain_all # run all jobs
-    # refresh # reload the page
+    Sidekiq::Job.drain_all # run all jobs
+    refresh # reload the page
 
     refute_selector "aside[data-error]"
     order = Order.last
@@ -59,8 +59,8 @@ class CreateOrdersTest < ApplicationSystemTestCase
     fill_in "order[quantity]", with: 1
 
     click_on "Place Order" # place declined order
-    # Sidekiq::Job.drain_all # run all jobs
-    # refresh # reload the page
+    Sidekiq::Job.drain_all # run all jobs
+    refresh # reload the page
 
     assert_text "Payment Declined: Insufficient funds"
     order = Order.last
