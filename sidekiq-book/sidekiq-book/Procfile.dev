@@ -1,0 +1,4 @@
+web: PORT=3000 bin/rails s
+sidekiq: bundle exec sidekiq
+js: yarn build --watch
+css: yarn build:css --watch

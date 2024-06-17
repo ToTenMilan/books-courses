@@ -1,0 +1,36 @@
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore uploaded files in development.
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
+
+/public/assets
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
+
+/node_modules
+
+sidekiq-book/.env.development.local
+sidekiq-book/.env.test.local
+# This is generated
+sidekiq-book/Procfile.run
+# This is a per-developer configuration file for Dockbox and should not be committed
+dx/docker-compose.local.env
+# This is a derived configuration file for Dockbox and should not be committed
+dx/docker-compose.env
