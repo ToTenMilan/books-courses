@@ -12,6 +12,7 @@ class OrderCreator
   # END:main-logic
 
   def complete_order(order)
+    # raise 'forced error for testing purposes'
     payments_response = charge(order)
     if payments_response.success?
 
