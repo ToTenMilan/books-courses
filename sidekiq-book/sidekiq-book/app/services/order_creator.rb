@@ -31,7 +31,16 @@ class OrderCreator
   end
 
   def send_notification_email(order)
-    email_response = send_email(order)
+    potential_matching_emails = email.​search_emails​(
+      order.​email​,
+      CONFIRMATION_EMAIL_TEMPLATE_ID
+    )
+    email_response = potential_matching_emails.detect { |email|
+      email.template_data["order_id"] == order.id
+    }
+    if email_response.nil?
+      email_response = send_email(order)
+    end
     order.update!(email_id: email_response.email_id)
     RequestOrderFulfillmentJob.perform_async(order.id)
   end
