@@ -15,16 +15,12 @@ class OrderCreator
     # raise 'forced error for testing purposes'
     payments_response = charge(order)
     if payments_response.success?
-
-      email_response       = send_email(order)
-      fulfillment_response = request_fulfillment(order)
-
       order.update!(
         charge_id: payments_response.charge_id,
         charge_completed_at: Time.zone.now,
-        charge_successful: true,
-        email_id: email_response.email_id,
-        fulfillment_request_id: fulfillment_response.request_id)
+        charge_successful: true
+      )
+      SendOrderNotificationEmailJob.perform_async(order.id)
     else
       order.update!(
         charge_completed_at: Time.zone.now,
@@ -32,6 +28,17 @@ class OrderCreator
         charge_decline_reason: payments_response.explanation
       )
     end
+  end
+
+  def send_notification_email(order)
+    email_response = send_email(order)
+    order.update!(email_id: email_response.email_id)
+    RequestOrderFulfillmentJob.perform_async(order.id)
+  end
+
+  def request_order_fulfillment(order)
+    fulfillment_response = request_fulfillment(order)
+    order.update!(fulfillment_request_id: fulfillment_response.request_id)
   end
 
 private
