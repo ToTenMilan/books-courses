@@ -31,8 +31,8 @@ class OrderCreator
   end
 
   def send_notification_email(order)
-    potential_matching_emails = email.​search_emails​(
-      order.​email​,
+    potential_matching_emails = email.search_emails(
+      order.email,
       CONFIRMATION_EMAIL_TEMPLATE_ID
     )
     email_response = potential_matching_emails.detect { |email|
