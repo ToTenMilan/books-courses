@@ -82,6 +82,7 @@ private
   def request_fulfillment(order)
     fulfillment_metadata = {}
     fulfillment_metadata[:order_id] = order.id
+    fullfilment_metadata[:idempotency_key] = "idempotency_key-order-#{order.id}"
     fulfillment.request_fulfillment(
       order.user.id,
       order.address,
