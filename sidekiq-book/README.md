@@ -1,3 +1,10 @@
+# Check the main branch of books-courses to inspect commits from the first chapter
+
+prevent transient errors from being notified
+Move Long running order creation on sidekiq queue and test in fake mode
+Configure sidekiq
+setup the app
+
 # Dev Environment for Sidekiq Book
 
 This is the dev environment used for my Sidekiq book.  It includes everything you need to get up and running as
