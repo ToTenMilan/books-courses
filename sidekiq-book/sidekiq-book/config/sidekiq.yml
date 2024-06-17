@@ -3,3 +3,4 @@
 :queues:
   - default
 :logfile: ./log/sidekiq.log
+# :max_retries: 1 # temporary to simulate a dead job handler
