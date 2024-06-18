@@ -1,0 +1,10 @@
+<% module_namespacing do -%>
+class <%= class_name %>Job < ApplicationJob
+<% if options[:queue].to_s != 'default' -%>
+  sidekiq_options queue: "<%= options[:queue] %>"
+<% end %>
+  def perform(args,should,go,here)
+    raise "This job has not been implemented"
+  end
+end
+<% end %>

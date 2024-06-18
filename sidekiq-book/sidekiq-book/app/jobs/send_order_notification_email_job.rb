@@ -1,5 +1,4 @@
-class SendOrderNotificationEmailJob
-  include Sidekiq::Job
+class SendOrderNotificationEmailJob < ApplicationJob
 
   def perform(order_id)
     order = Order.find(order_id)

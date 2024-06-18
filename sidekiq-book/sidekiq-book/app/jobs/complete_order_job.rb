@@ -1,5 +1,4 @@
-class CompleteOrderJob
-  include Sidekiq::Job
+class CompleteOrderJob < ApplicationJob
 
   sidekiq_options queue: :high
 
