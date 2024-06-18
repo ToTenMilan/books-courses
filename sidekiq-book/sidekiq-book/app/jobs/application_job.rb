@@ -2,9 +2,6 @@
 
 class ApplicationJob
   include Sidekiq::Worker
-  # Automatically retry jobs that encountered a deadlock
-  # retry_on ActiveRecord::Deadlocked
-
-  # Most jobs are safe to ignore if the underlying records are no longer available
-  # discard_on ActiveJob::DeserializationError
+  # client middleware - run code around job is enqueued
+  # server middleware - run code around job is executed
 end
