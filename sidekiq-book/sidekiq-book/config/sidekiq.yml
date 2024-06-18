@@ -1,6 +1,7 @@
 :concurrency: <%= ENV.fetch("SIDEKIQ_CONCURRENCY") { 5 } %>
 :timeout: <%= ENV.fetch("SIDEKIQ_TIMEOUT_SECONDS") { 25 } %>
 :queues:
+  - high
   - default
 :logfile: ./log/sidekiq.log
 # :max_retries: 1 # temporary to simulate a dead job handler

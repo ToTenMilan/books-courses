@@ -1,4 +1,6 @@
 web: PORT=3000 bin/rails s
 sidekiq: bundle exec sidekiq
+# Run new sidekiq process, that runs only one_at_a_time queue, on only one thread
+# sidekiq: bundle exec sidekiq -q one_at_a_time -c 1
 js: yarn build --watch
 css: yarn build:css --watch
