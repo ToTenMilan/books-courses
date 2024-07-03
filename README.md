@@ -88,9 +88,11 @@
 
 ---
 
-## DevOps / Docker / Kubernetes
+## DevOps
 
 #### Courses
+
+###### ![Halted](https://img.shields.io/badge/halted-%20-lightgrey) Mastering Github Actions: From beginner to Expert | [Github repo](https://github.com/ToTenMilan/github-actions-course) | [source](https://www.udemy.com/course/mastering-github-actions-beginner-to-expert/?couponCode=ST16MT70224)
 
 ###### O'Reilly Safari - Docker Essentials: The Definitive Guide to Docker Containerization | [GitHub repo](https://github.com/ToTenMilan/books-courses/tree/master/Docker-essentials-the-definitive-guide-to-docker-containerization) | [source](https://learning.oreilly.com/videos/docker-essentials-the/9781634625814)
 
