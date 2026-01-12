@@ -1,0 +1,19 @@
+{
+  "workbench.colorCustomizations": {
+    "[Atom One Dark]": {
+      "peekViewEditor.matchHighlightBackground": "#303030"
+    },
+    "activityBar.background": "#49e885",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#a072ed",
+    "activityBarBadge.foreground": "#15202b",
+    "titleBar.activeBackground": "#1ce267",
+    "titleBar.inactiveBackground": "#1ce26799",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveForeground": "#15202b99",
+    "statusBar.background": "#1ce267",
+    "statusBarItem.hoverBackground": "#16b552",
+    "statusBar.foreground": "#15202b"
+  }
+}
